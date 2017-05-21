@@ -10,7 +10,7 @@ create table CommitteeMembers(
 	username nvarchar(10) primary key,
 	pass nvarchar(10),
 	firstName nvarchar(10),
-	sureName nvarchar(10),
+	surName nvarchar(10),
 	email nvarchar(30),
 	webPage nvarchar(20),
 	affiliation nvarchar(15),
@@ -21,7 +21,7 @@ create table Listeners(
 	username nvarchar(10) primary key,
 	pass nvarchar(10),
 	firstName nvarchar(10),
-	sureName nvarchar(10)
+	surName nvarchar(10)
 );
 
 create table Sections(
@@ -31,7 +31,7 @@ create table Sections(
 
 create table Papers(
 	idP int primary key,
-	titlu nvarchar(20),
+	title nvarchar(20),
 	keywords nvarchar(20),
 	topics nvarchar(20),
 	authors nvarchar(50),
@@ -39,15 +39,13 @@ create table Papers(
 	datePaper date,
 	pathPaper nvarchar(30),
 	idSection int references Sections(idS)
-
 );
-
 
 create table Speakers(
 	username nvarchar(10) primary key,
 	pass nvarchar(10),
 	firstName nvarchar(10),
-	sureName nvarchar(10),
+	surName nvarchar(10),
 	idLucrare int foreign key references Papers(idP)
 );
 
