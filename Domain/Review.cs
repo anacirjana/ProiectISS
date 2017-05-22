@@ -10,7 +10,7 @@ namespace ISS
 	{
 		private int idR;
 		private int idP;
-		private string usernameCommiteeMember;
+		private string usernameCommitteeMember;
 		private string qualifier;
 		private string comment;
 
@@ -19,7 +19,7 @@ namespace ISS
 		{
 			IdR = 0;
 			IdP = 0;
-			UsernameCommiteeMember = "";
+			UsernameCommitteeMember = "";
 			Qualifier = "";
 			Comment = "";
 		}
@@ -28,7 +28,7 @@ namespace ISS
 		public Review(int idr, string user, int idp, string qualif, string comm)
 		{
 			IdR = idr;
-			UsernameCommiteeMember = user;
+			UsernameCommitteeMember = user;
 			IdP = idp;
 			Qualifier = qualif;
 			Comment = comm;
@@ -38,7 +38,7 @@ namespace ISS
 		public Review(Review r)
 		{
 			IdR = r.IdR;
-			UsernameCommiteeMember = r.UsernameCommiteeMember;
+			UsernameCommitteeMember = r.UsernameCommitteeMember;
 			IdP = r.IdP;
 			Qualifier = r.Qualifier;
 			Comment = r.Comment;
@@ -70,16 +70,16 @@ namespace ISS
 			}
 		}
 
-		public string UsernameCommiteeMember
+		public string UsernameCommitteeMember
 		{
 			get
 			{
-				return usernameCommiteeMember;
+				return usernameCommitteeMember;
 			}
 
 			set
 			{
-				usernameCommiteeMember = value;
+				usernameCommitteeMember = value;
 			}
 		}
 
