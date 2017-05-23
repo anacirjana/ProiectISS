@@ -56,3 +56,9 @@ create table Reviews(
 	qualifier nvarchar(20) ,
 	comment nvarchar(100)
 );
+
+create table Bidding(
+	usernameCommitteeMember int references CommitteeMembers(username),
+	idP int references Papers(idP),
+	accepted bit
+);
