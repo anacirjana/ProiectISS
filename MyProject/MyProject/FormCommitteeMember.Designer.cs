@@ -1,6 +1,6 @@
 ﻿namespace MyProject
 {
-    partial class Form2
+    partial class FormCommitteeMember
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.LabelUsername = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -64,17 +65,29 @@
             this.LabelUsername.TabIndex = 2;
             this.LabelUsername.Text = "username";
             // 
-            // Form2
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label3.Location = new System.Drawing.Point(37, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(230, 43);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Bid proposals";
+            // 
+            // FormCommitteeMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(932, 503);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.LabelUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Name = "Form2";
+            this.Name = "FormCommitteeMember";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -86,6 +99,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label LabelUsername;
+        private System.Windows.Forms.Label label3;
     }
 }
 

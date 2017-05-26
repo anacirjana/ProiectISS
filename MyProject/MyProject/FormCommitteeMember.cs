@@ -12,12 +12,12 @@ using MyProject.Repository;
 using MyProject.Controller;
 namespace MyProject
 {
-    public partial class Form2 : Form
+    public partial class FormCommitteeMember : Form
     {
         RepositoryCommitteeMembers repositoryCM;
         ControllerCommitteeMembers controllerCM;
         User loggedUser;
-        public Form2(User u)
+        public FormCommitteeMember(User u)
         {
             loggedUser = new User();
             loggedUser = u;

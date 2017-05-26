@@ -35,7 +35,7 @@ namespace MyProject
                 if (cm.Username == username) //login successful
                 {
                     this.Hide();
-                    Form2 secondform = new Form2(cm);
+                    FormCommitteeMember secondform = new FormCommitteeMember(cm);
                     secondform.Show();
                 }
             }
