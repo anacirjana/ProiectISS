@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyProject.utils
+namespace MyProject.Utils
 {
     public abstract class ConnectionFactory
     {

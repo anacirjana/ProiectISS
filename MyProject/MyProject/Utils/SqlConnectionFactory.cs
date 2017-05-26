@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-namespace MyProject.utils
+namespace MyProject.Utils
 {
     class SQLiteConnectionFactory : ConnectionFactory
     {

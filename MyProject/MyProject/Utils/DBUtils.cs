@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyProject.utils
+namespace MyProject.Utils
 {
         public static class DBUtils
         {
