@@ -58,7 +58,8 @@ create table Reviews(
 );
 
 create table Bidding(
-	usernameCommitteeMember int references CommitteeMembers(username),
+	usernameCommitteeMember nvarchar(10) references CommitteeMembers(username),
 	idP int references Papers(idP),
 	accepted bit
 );
+insert into CommitteeMembers values ('ion_53','secret','Ion','Marinescu','ionica53@yahoo.com','','physics','chair')
