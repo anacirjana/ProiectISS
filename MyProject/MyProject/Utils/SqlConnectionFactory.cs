@@ -4,15 +4,17 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SQLite;
-namespace Lab2Agentii.utils
+using System.Data.SqlClient;
+
+namespace MyProject.utils
 {
     class SQLiteConnectionFactory : ConnectionFactory
     {
         public override IDbConnection createConnection()
         {
-            String connectionString = "Data Source=BazaDate.db;Version=3;";
-            return new SQLiteConnection(connectionString);
+            string connectionString = "Data Source=CARMEN\\SQLEXPRESS; " +
+            "Initial Catalog = ProiectISS; Integrated Security = True";
+            return new SqlConnection(connectionString);
         }
     }
 }
