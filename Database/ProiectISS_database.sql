@@ -45,6 +45,7 @@ create table Papers(
 create table Speakers(
 	username nvarchar(10) primary key,
 	pass nvarchar(10),
+	email nvarchar(30),
 	firstName nvarchar(10),
 	surName nvarchar(10),
 	idLucrare int foreign key references Papers(idP)
