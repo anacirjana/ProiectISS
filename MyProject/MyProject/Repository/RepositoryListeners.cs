@@ -5,35 +5,113 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using MyProject.Domain;
+using MyProject.Utils;
+using MyProject.Exception.MyProject.Exception;
 
 namespace MyProject.Repository
 {
     class RepositoryListeners
     {
-        private SqlConnection _connectionString = new SqlConnection("Data Source=DESKTOP-DMVLDS4\\SQLEXPRESS; " +
-            "Initial Catalog = ProiectISS; Integrated Security = True");
+
         public RepositoryListeners()
         {
         }
         public void Save(CommitteeMember cm)
         {
+            var con = DBUtils.getConnection();
+            using (var comm = con.CreateCommand())
+            {
+                comm.CommandText = "insert into Listeners(username,pass,firstName,surName,email) values (@username,@pass,@firstName,@surName,@email); ";
+                var paramUser = comm.CreateParameter();
+                paramUser.ParameterName = "@username";
+                paramUser.Value = cm.Username;
+                comm.Parameters.Add(paramUser);
 
+                var paramPass = comm.CreateParameter();
+                paramPass.ParameterName = "@pass";
+                paramPass.Value = cm.Password;
+                comm.Parameters.Add(paramPass);
+
+                var paramFName = comm.CreateParameter();
+                paramFName.ParameterName = "@firstName";
+                paramFName.Value = cm.FirstName;
+                comm.Parameters.Add(paramFName);
+
+                var paramSName = comm.CreateParameter();
+                paramSName.ParameterName = "@surName";
+                paramSName.Value = cm.SurName;
+                comm.Parameters.Add(paramSName);
+
+                var paramEmail = comm.CreateParameter();
+                paramEmail.ParameterName = "@email";
+                paramEmail.Value = cm.Password;
+                comm.Parameters.Add(paramEmail);
+
+                var result = comm.ExecuteNonQuery();
+                if (result == 0)
+                    throw new RepositoryException("No listener added !");
+            }
         }
         public void Update(CommitteeMember cm1, CommitteeMember cm2)
         {
+            var con = DBUtils.getConnection();
+            using (var comm = con.CreateCommand())
+            {
+                comm.CommandText = "update Listeners set pass=@pass,firstName=@firstName,surName=@surName,email=@email where username=@username";
+                var paramPass = comm.CreateParameter();
+                paramPass.ParameterName = "@pass";
+                paramPass.Value = cm2.Password;
+                comm.Parameters.Add(paramPass);
+
+                var paramFName = comm.CreateParameter();
+                paramFName.ParameterName = "@firstName";
+                paramFName.Value = cm2.FirstName;
+                comm.Parameters.Add(paramFName);
+
+                var paramSName = comm.CreateParameter();
+                paramSName.ParameterName = "@surName";
+                paramSName.Value = cm2.SurName;
+                comm.Parameters.Add(paramSName);
+
+                var paramEmail = comm.CreateParameter();
+                paramEmail.ParameterName = "@email";
+                paramEmail.Value = cm2.Password;
+                comm.Parameters.Add(paramEmail);
+
+                var paramUser = comm.CreateParameter();
+                paramUser.ParameterName = "@username";
+                paramUser.Value = cm1.Username;
+                comm.Parameters.Add(paramUser);
+
+                var result = comm.ExecuteNonQuery();
+                if (result == 0)
+                    throw new RepositoryException("No listener updated !");
+            }
 
         }
         public void Delete(string username)
         {
-
+            var con = DBUtils.getConnection();
+            using (var comm = con.CreateCommand())
+            {
+                comm.CommandText = "delete from Listeners where username=@username";
+                var paramUser = comm.CreateParameter();
+                paramUser.ParameterName = "@username";
+                paramUser.Value = username;
+                comm.Parameters.Add(paramUser);
+                var result = comm.ExecuteNonQuery();
+                if (result == 0)
+                    throw new RepositoryException("No listener deleted !");
+            }
         }
         public Listener GetOne(string username)
         {
-            var command = (SqlCommand)_connectionString.CreateCommand();
+            var con = DBUtils.getConnection();
+            var command = (SqlCommand)con.CreateCommand();
             command.CommandText = "SELECT * FROM Listeners WHERE username = @usname";
             command.Parameters.AddWithValue("@usname", username);
 
-            _connectionString.Open();
+
             var reader = command.ExecuteReader();
             var password = "";
 
@@ -46,23 +124,38 @@ namespace MyProject.Repository
                 password = reader.GetString(1);
                 firstName = reader.GetString(2);
                 surName = reader.GetString(3);
-                //email = reader.GetString(4);
+                email = reader.GetString(4);
             }
 
             reader.Close();
-            _connectionString.Close();
+
 
             Listener l = new Listener(username, password, firstName, surName, email);
             return l;
         }
         public IEnumerable<Listener> GetAll()
         {
-            List<Listener> l = new List<Listener>();
-            Listener li = new Listener("lala", "lala", "", "", "");
-            l.Add(li);
-            return l;
+            List<Listener> listeners = new List<Listener>();
+            var con = DBUtils.getConnection();
+            var command = (SqlCommand)con.CreateCommand();
+            command.CommandText = "SELECT * FROM Listeners";
+            var reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string username = reader.GetString(1);
+                string password = reader.GetString(2);
+                string firstName = reader.GetString(3);
+                string surName = reader.GetString(4);
+                string email = reader.GetString(5);
+                Listener listener = new Listener(username, password, firstName, surName, email);
+                listeners.Add(listener);
+            }
+
+            reader.Close();
+            return listeners;
         }
-       
+
 
     }
 }
