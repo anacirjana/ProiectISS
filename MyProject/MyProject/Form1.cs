@@ -28,18 +28,51 @@ namespace MyProject
         {
             string username = TextBoxUsername.Text;
             string password = TextBoxPassword.Text;
-            CommitteeMember cm = controllerCM.Login(username, password);
-            if (cm.Username == username) //login successful
+            var item = ComboBoxParticipants.SelectedItem;
+            if (item == "Committee Member")
             {
-                this.Hide();
-                Form2 secondform = new Form2(cm);  
-                secondform.Show();
+                CommitteeMember cm = controllerCM.Login(username, password);
+                if (cm.Username == username) //login successful
+                {
+                    this.Hide();
+                    Form2 secondform = new Form2(cm);
+                    secondform.Show();
+                }
             }
+            else
+                 if (item == "Listener")
+            {
+                /*
+                Listener l= controllerL.Login(username, password);
+                if (l.Username == username) //login successful
+                {
+                    this.Hide();
+                    Form2 secondform = new Form2(cm);
+                    secondform.Show();
+                }
+                */
+            }
+            else
+                 if (item == "Speaker")
+            {
+                /*
+                Listener l= controllerL.Login(username, password);
+                if (l.Username == username) //login successful
+                {
+                    this.Hide();
+                    Form2 secondform = new Form2(cm);
+                    secondform.Show();
+                }
+                */
+            }
+
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FormRegister secondform = new FormRegister();
+            secondform.Show();
         }
 
         private void label6_MouseHover(object sender, EventArgs e)

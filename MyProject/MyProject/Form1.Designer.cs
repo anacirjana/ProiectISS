@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ComboBoxParticipants = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.TextBoxPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -36,9 +39,6 @@
             this.TextBoxUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ComboBoxParticipants = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,52 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(930, 503);
             this.panel1.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label6.Location = new System.Drawing.Point(346, 442);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 32);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "HERE";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.label6.MouseEnter += new System.EventHandler(this.label6_MouseEnter);
+            this.label6.MouseLeave += new System.EventHandler(this.label6_MouseLeave);
+            this.label6.MouseHover += new System.EventHandler(this.label6_MouseHover);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label5.Location = new System.Drawing.Point(109, 85);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(222, 32);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Choose your role:";
+            // 
+            // ComboBoxParticipants
+            // 
+            this.ComboBoxParticipants.BackColor = System.Drawing.Color.AliceBlue;
+            this.ComboBoxParticipants.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ComboBoxParticipants.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxParticipants.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ComboBoxParticipants.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ComboBoxParticipants.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.ComboBoxParticipants.FormattingEnabled = true;
+            this.ComboBoxParticipants.Items.AddRange(new object[] {
+            "Committee Member",
+            "Listener",
+            "Speaker"});
+            this.ComboBoxParticipants.Location = new System.Drawing.Point(380, 94);
+            this.ComboBoxParticipants.Name = "ComboBoxParticipants";
+            this.ComboBoxParticipants.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ComboBoxParticipants.Size = new System.Drawing.Size(199, 28);
+            this.ComboBoxParticipants.TabIndex = 6;
             // 
             // button1
             // 
@@ -91,11 +137,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(201, 213);
+            this.label4.Location = new System.Drawing.Point(190, 213);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 32);
+            this.label4.Size = new System.Drawing.Size(135, 32);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Passvord:";
+            this.label4.Text = "Password:";
             // 
             // label3
             // 
@@ -140,52 +186,6 @@
             this.label1.Size = new System.Drawing.Size(428, 63);
             this.label1.TabIndex = 0;
             this.label1.Text = "Entering the CMS";
-            // 
-            // ComboBoxParticipants
-            // 
-            this.ComboBoxParticipants.BackColor = System.Drawing.Color.AliceBlue;
-            this.ComboBoxParticipants.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ComboBoxParticipants.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBoxParticipants.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ComboBoxParticipants.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ComboBoxParticipants.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.ComboBoxParticipants.FormattingEnabled = true;
-            this.ComboBoxParticipants.Items.AddRange(new object[] {
-            "Committee Member",
-            "Listener",
-            "Speaker"});
-            this.ComboBoxParticipants.Location = new System.Drawing.Point(380, 94);
-            this.ComboBoxParticipants.Name = "ComboBoxParticipants";
-            this.ComboBoxParticipants.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ComboBoxParticipants.Size = new System.Drawing.Size(199, 28);
-            this.ComboBoxParticipants.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label5.Location = new System.Drawing.Point(109, 85);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(222, 32);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Choose your role:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label6.Location = new System.Drawing.Point(346, 442);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 32);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "HERE";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            this.label6.MouseEnter += new System.EventHandler(this.label6_MouseEnter);
-            this.label6.MouseLeave += new System.EventHandler(this.label6_MouseLeave);
-            this.label6.MouseHover += new System.EventHandler(this.label6_MouseHover);
             // 
             // Form1
             // 
