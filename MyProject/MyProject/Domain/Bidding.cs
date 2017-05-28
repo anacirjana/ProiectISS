@@ -60,7 +60,7 @@ namespace MyProject.Domain
 
         public override string ToString()
         {
-            return this.usernameCommitteeMember + " " + this.idPaper + " " + this.accepted;
+            return this.usernameCommitteeMember + " " + this.idPaper.ToString() + " " + this.accepted.ToString();
         }
     }
 }
