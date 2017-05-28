@@ -11,9 +11,9 @@ namespace MyProject.Controller
     class ControllerCommitteeMembers
     {
         RepositoryCommitteeMembers repo;
-        public ControllerCommitteeMembers(RepositoryCommitteeMembers r)
+        public ControllerCommitteeMembers()
         {
-            repo = r;
+            repo = new RepositoryCommitteeMembers();
         }
         public CommitteeMember Login(string username, string password)
         {

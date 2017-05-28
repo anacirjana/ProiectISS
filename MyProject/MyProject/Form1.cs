@@ -18,8 +18,7 @@ namespace MyProject
         ControllerCommitteeMembers controllerCM;
         public Form1()
         {
-            repositoryCM = new RepositoryCommitteeMembers();
-            controllerCM = new ControllerCommitteeMembers(repositoryCM);
+            controllerCM = new ControllerCommitteeMembers();
             InitializeComponent();
             
         }

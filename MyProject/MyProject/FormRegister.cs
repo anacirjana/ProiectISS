@@ -48,13 +48,13 @@ namespace MyProject
             }
             else if (comboSel == "Listener")
             {
-                ControllerListeners ctrListners = new ControllerListeners(new RepositoryListeners());
+                ControllerListeners ctrListners = new ControllerListeners();
                 ctrListners.Register(new Listener(textBox3.Text,TextBoxPassword.Text,textBox1.Text,
                                                         textBox2.Text,textBox4.Text));
             }
             else if(comboSel == "Speaker")
             {
-                ControllerSpeakers ctrSpeakers = new ControllerSpeakers(new RepositorySpeakers());
+                ControllerSpeakers ctrSpeakers = new ControllerSpeakers();
 				ctrSpeakers.Register(new Speaker(textBox3.Text, TextBoxPassword.Text, textBox1.Text,
                                                         textBox2.Text, textBox4.Text));
             }

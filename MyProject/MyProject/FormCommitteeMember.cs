@@ -14,8 +14,7 @@ namespace MyProject
 {
     public partial class FormCommitteeMember : Form
     {
-        RepositoryCommitteeMembers repositoryCM;
-        ControllerCommitteeMembers controllerCM;
+        ControllerCommitteeMembers controllerCM = new ControllerCommitteeMembers();
         User loggedUser;
         public FormCommitteeMember(User u)
         {

@@ -12,9 +12,9 @@ namespace MyProject.Controller
     {
         private RepositorySpeakers repo;
 
-        public ControllerSpeakers(RepositorySpeakers r)
+        public ControllerSpeakers()
         {
-            repo = r;
+            repo = new RepositorySpeakers();
         }
 
         public Speaker Login(string username, string password)

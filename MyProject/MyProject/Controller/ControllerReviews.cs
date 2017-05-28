@@ -12,9 +12,9 @@ namespace MyProject.Controller
 	{
 		private RepositoryReviews _repoReviews;
 
-		public ControllerReviews(RepositoryReviews repoReviews)
+		public ControllerReviews()
 		{
-			_repoReviews = repoReviews;
+			_repoReviews = new RepositoryReviews();
 		}
 
 		public IEnumerable<Review> GetAll()
