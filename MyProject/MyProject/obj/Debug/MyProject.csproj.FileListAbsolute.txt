@@ -9,3 +9,15 @@ D:\Facultate\ISS\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.exe
 D:\Facultate\ISS\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.pdb
 D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.exe
 D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.pdb
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\bin\Debug\MyProject.exe.config
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.exe
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.pdb
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\bin\Debug\MyProject.exe
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\bin\Debug\MyProject.pdb
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.csprojResolveAssemblyReference.cache
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.Form1.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.FormCommitteeMember.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.FormRegister.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.Properties.Resources.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.csproj.GenerateResource.Cache
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.FormBidProposals.resources

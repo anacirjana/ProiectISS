@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="Controller\ControllerBiddings.cs" />
     <Compile Include="Controller\ControllerCommitteeMembers.cs" />
+    <Compile Include="Controller\ControllerListeners.cs" />
+    <Compile Include="Controller\ControllerPapers.cs" />
     <Compile Include="Controller\ControllerReviews.cs" />
     <Compile Include="Controller\ControllerSpeakers.cs" />
     <Compile Include="Domain\Abstract.cs" />
@@ -65,6 +67,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBidProposals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBidProposals.Designer.cs">
+      <DependentUpon>FormBidProposals.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCommitteeMember.cs">
       <SubType>Form</SubType>
@@ -93,6 +101,9 @@
     <Compile Include="Utils\SqlConnectionFactory.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBidProposals.resx">
+      <DependentUpon>FormBidProposals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCommitteeMember.resx">
       <DependentUpon>FormCommitteeMember.cs</DependentUpon>

@@ -14,12 +14,12 @@ namespace MyProject
 {
     public partial class FormCommitteeMember : Form
     {
-        ControllerCommitteeMembers controllerCM = new ControllerCommitteeMembers();
-        User loggedUser;
-        public FormCommitteeMember(User u)
+        ControllerCommitteeMembers controllerCM;
+        CommitteeMember loggedUser;
+        public FormCommitteeMember(CommitteeMember c)
         {
-            loggedUser = new User();
-            loggedUser = u;
+            loggedUser = new CommitteeMember();
+            loggedUser = c;
             
             InitializeComponent();
 
@@ -34,6 +34,24 @@ namespace MyProject
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label6_MouseHover(object sender, EventArgs e)
+        {
+            label6.ForeColor = Color.Red;
+        }
+
+        private void label6_MouseLeave(object sender, EventArgs e)
+        {
+
+            label6.ForeColor = Color.DeepSkyBlue;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormBidProposals formBid = new FormBidProposals(loggedUser);
+            formBid.Show();
         }
     }
 }

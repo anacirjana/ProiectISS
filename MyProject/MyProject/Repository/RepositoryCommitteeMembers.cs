@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -6,11 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using MyProject.Domain;
 using MyProject.Utils;
-
 namespace MyProject.Repository
 {
     class RepositoryCommitteeMembers : IRepository<string, CommitteeMember>
     {
+        private SqlConnection _connectionString = (SqlConnection)DBUtils.getConnection();
+        
         public RepositoryCommitteeMembers()
         {
         }
@@ -32,7 +33,7 @@ namespace MyProject.Repository
         
         public CommitteeMember GetOne(string username)
         {
-            var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
+            var command = (SqlCommand)_connectionString.CreateCommand();
             command.CommandText = "SELECT * FROM CommitteeMembers WHERE username = @usname";
             command.Parameters.AddWithValue("@usname", username);
             
@@ -46,13 +47,14 @@ namespace MyProject.Repository
             }
 
             reader.Close();
+            
             return committeeMember;  
         }               
         
         public IEnumerable<CommitteeMember> GetAll()  
         {                                            
             List<CommitteeMember> committeeMembers=new List<CommitteeMember>();
-            var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
+            var command = (SqlCommand)_connectionString.CreateCommand();
             command.CommandText = "SELECT * FROM CommitteeMembers";
             
             var reader = command.ExecuteReader();
@@ -64,12 +66,13 @@ namespace MyProject.Repository
             }
 
             reader.Close();
+
             return committeeMembers;
         }
         
         public string GetAffiliation(string username)
         {
-            var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
+            var command = (SqlCommand)_connectionString.CreateCommand();
             command.CommandText = "SELECT affiliation FROM CommitteeMembers WHERE username = @usname";
             command.Parameters.AddWithValue("@usname", username);
             
@@ -82,12 +85,13 @@ namespace MyProject.Repository
             }
 
             reader.Close();
+
             return affiliation;
         }
 
         public string GetWebpage(string username)
         {
-            var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
+            var command = (SqlCommand)_connectionString.CreateCommand();
             command.CommandText = "SELECT webpage FROM CommitteeMembers WHERE username = @usname";
             command.Parameters.AddWithValue("@usname", username);
             
@@ -100,12 +104,13 @@ namespace MyProject.Repository
             }
 
             reader.Close();
+
             return webpage;
         }
 
         public string GetRang(string username)
         {
-            var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
+            var command = (SqlCommand)_connectionString.CreateCommand();
             command.CommandText = "SELECT rang FROM CommitteeMembers WHERE username = @usname";
             command.Parameters.AddWithValue("@usname", username);
             
@@ -118,6 +123,7 @@ namespace MyProject.Repository
             }
 
             reader.Close();
+
             return rang;
         }
     }
