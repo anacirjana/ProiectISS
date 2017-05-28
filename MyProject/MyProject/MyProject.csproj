@@ -54,17 +54,17 @@
     <Compile Include="Domain\Speaker.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Exception\RepositoryException.cs" />
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCommitteeMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCommitteeMember.Designer.cs">
+      <DependentUpon>FormCommitteeMember.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRegister.cs">
       <SubType>Form</SubType>
@@ -79,11 +79,14 @@
     <Compile Include="Repository\RepositoryCommitteeMembers.cs" />
     <Compile Include="Repository\RepositoryListeners.cs" />
     <Compile Include="Repository\RepositoryReviews.cs" />
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Utils\ConnectionFactory.cs" />
+    <Compile Include="Utils\DBUtils.cs" />
+    <Compile Include="Utils\SqlConnectionFactory.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCommitteeMember.resx">
+      <DependentUpon>FormCommitteeMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>

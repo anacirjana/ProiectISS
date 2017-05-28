@@ -1,0 +1,11 @@
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.exe.config
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.csprojResolveAssemblyReference.cache
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.Form1.resources
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormCommitteeMember.resources
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormRegister.resources
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.Properties.Resources.resources
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.csproj.GenerateResource.Cache
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.exe
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.pdb
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.exe
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.pdb
