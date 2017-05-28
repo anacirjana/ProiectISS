@@ -16,18 +16,22 @@ namespace MyProject.Repository
         public RepositoryCommitteeMembers()
         {
         }
+        
         public void Save(CommitteeMember cm)
         {
 
         }
+        
         public void Update(CommitteeMember cm1, CommitteeMember cm2)
         {
 
         }
+        
         public void Delete(string username)
         {
 
         }
+        
         public CommitteeMember GetOne(string username)
         {
             var command = (SqlCommand)_connectionString.CreateCommand();
@@ -61,14 +65,29 @@ namespace MyProject.Repository
 
             CommitteeMember cm = new CommitteeMember(username,password, firstName, surName, email, webpage, affiliation, role);
             return cm;  
-        }                                             
+        }               
+        
         public IEnumerable<CommitteeMember> GetAll()  
         {                                            
-            List<CommitteeMember> l=new List<CommitteeMember>();
-            CommitteeMember cm = new CommitteeMember("lala", "lala", "", "", "", "", "", "");
-            l.Add(cm);
-            return l;
+            List<CommitteeMember> committeeMembers=new List<CommitteeMember>();
+            var command = (SqlCommand)_connectionString.CreateCommand();
+            command.CommandText = "SELECT * FROM CommitteeMembers";
+
+            _connectionString.Open();
+            var reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                committeeMembers.Add(new CommitteeMember(reader.GetString(0),reader.GetString(1),reader.GetString(2),reader.GetString(3),
+                                                        reader.GetString(4),reader.GetString(5),reader.GetString(6),reader.GetString(7)));
+            }
+
+            reader.Close();
+            _connectionString.Close();
+
+            return committeeMembers;
         }
+        
         public string GetAffiliation(string username)
         {
             var command = (SqlCommand)_connectionString.CreateCommand();
