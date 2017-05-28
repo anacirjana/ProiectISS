@@ -27,7 +27,7 @@ namespace MyProject.Controller
 
         }
 
-        public void addSpeaker(Speaker s)
+        public void Register(Speaker s)
         {
             repo.Save(s);
         }
