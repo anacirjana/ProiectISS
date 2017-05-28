@@ -17,29 +17,29 @@ namespace MyProject.Controller
             _repositoryBidding = new RepositoryBiddings();
         }
 
-        public void addBidding(Bidding bidding)
+        public void AddBidding(Bidding bidding)
         {
             _repositoryBidding.Save(bidding);
         }
 
-        public void deleteBidding(string userCM, int idPaper)
+        public void DeleteBidding(string userCM, int idPaper)
         {
             string idBidding = userCM + " " + idPaper.ToString();
             _repositoryBidding.Delete(idBidding);
         }
 
-        public void updateBidding(Bidding oldBidding, Bidding newBidding)
+        public void UpdateBidding(Bidding oldBidding, Bidding newBidding)
         {
             _repositoryBidding.Update(oldBidding, newBidding);
         }
 
-        public Bidding getOneBidding(string userCM, int idPaper)
+        public Bidding GetOneBidding(string userCM, int idPaper)
         {
             string idBidding = userCM + " " + idPaper.ToString();
             return _repositoryBidding.GetOne(idBidding);
         }
 
-        public IEnumerable<Bidding> getAllBiddings()
+        public IEnumerable<Bidding> GetAllBiddings()
         {
             return _repositoryBidding.GetAll();
         }
