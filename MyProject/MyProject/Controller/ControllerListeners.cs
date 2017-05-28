@@ -12,7 +12,7 @@ namespace MyProject.Controller
 
         public ControllerListeners()
         {
-            repo = new RepositorySpeakers();
+            repo = new RepositoryListeners();
         }
 
         public Listener Login(string username, string password)
