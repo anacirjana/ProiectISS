@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,32 +8,21 @@ namespace MyProject.Domain
 {
     public class CommitteeMember: User
     {
-        private string affiliation;
         private string webpage;
+        private string affiliation;
         private string role;
+        
         public CommitteeMember()
         {
 
         }
-        public CommitteeMember(string uname, string pass, string fname, string lname, string eml, string afl, string web, string role):
+        
+        public CommitteeMember(string uname, string pass, string fname, string lname, string eml, string web, string afl, string role):
             base(uname,pass,fname,lname,eml)
         {
-            this.affiliation = afl;
             this.webpage = web;
+            this.affiliation = afl;
             this.role = role;
-        }
-
-        public string Affiliation
-        {
-            get
-            {
-                return this.affiliation;
-            }
-
-            set
-            {
-                this.affiliation = value;
-            }
         }
 
         public string Webpage
@@ -46,6 +35,19 @@ namespace MyProject.Domain
             set
             {
                 this.webpage = value;
+            }
+        }
+
+        public string Affiliation
+        {
+            get
+            {
+                return this.affiliation;
+            }
+
+            set
+            {
+                this.affiliation = value;
             }
         }
 
@@ -64,7 +66,7 @@ namespace MyProject.Domain
 
         public override string ToString()
         {
-            return base.ToString() + this.affiliation + this.webpage + this.role;
+            return base.ToString() + this.webpage + this.affiliation + this.role;
         }
     }
 }
