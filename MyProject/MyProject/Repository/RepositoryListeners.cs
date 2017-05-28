@@ -44,7 +44,7 @@ namespace MyProject.Repository
 
                 var paramEmail = comm.CreateParameter();
                 paramEmail.ParameterName = "@email";
-                paramEmail.Value = l.Password;
+                paramEmail.Value = l.Email;
                 comm.Parameters.Add(paramEmail);
 
                 var result = comm.ExecuteNonQuery();
