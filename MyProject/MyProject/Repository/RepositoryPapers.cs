@@ -4,25 +4,50 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using MyProject.Domain;
+using MyProject.Repository;
+using MyProject.Utils;
 namespace MyProject.Repository
 {
-    class RepositoryPapers<Integer, Review> 
+    class RepositoryPapers<Integer, Paper> : IRepository<int, Paper> where Paper: new()
     {
-        
+        public void Save(Paper p)
+        {
+            //nu trebuie
+        }
+        public void Update(Paper p1, Paper p2)
+        {
+
+        }
+        public void Delete(int id)
+        {
+
+        }
+
         public RepositoryPapers()
         {
             
         }
+        public Paper GetOne(int id)
+        {
+            Paper p = new Paper();
+            return p;
+        }
+        public IEnumerable<Paper> GetAll()
+        {
+            List<Paper> l = new List<Paper>();
+            Paper cm = new Paper();
+            l.Add(cm);
+            return l;
+        }
+        //======================================================================
 
-		//======================================================================
-
-		public string GetTitle(int id)
+        public string GetTitle(int id)
 		{
 			var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
 			command.CommandText = "SELECT title FROM Papers WHERE idP = @id";
             command.Parameters.AddWithValue("@id", id);
-			_connectionString.Open();
+
 			var reader = command.ExecuteReader();
 			string title = "";
 			if (reader.Read())
@@ -30,7 +55,6 @@ namespace MyProject.Repository
 				title = reader[0].ToString();
 			}
 			reader.Close();
-			_connectionString.Close();
             return title;
 		}
 
@@ -41,7 +65,6 @@ namespace MyProject.Repository
 			var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
 			command.CommandText = "SELECT keywords FROM Papers WHERE idP = @id";
 			command.Parameters.AddWithValue("@id", id);
-			_connectionString.Open();
 			var reader = command.ExecuteReader();
 			string keywords = "";
 			if (reader.Read())
@@ -49,7 +72,6 @@ namespace MyProject.Repository
                 keywords = reader[0].ToString();
 			}
 			reader.Close();
-			_connectionString.Close();
             return keywords;
 		}
 
@@ -60,7 +82,7 @@ namespace MyProject.Repository
 			var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
 			command.CommandText = "SELECT topics FROM Papers WHERE idP = @id";
 			command.Parameters.AddWithValue("@id", id);
-			_connectionString.Open();
+
 			var reader = command.ExecuteReader();
 			string topics = "";
 			if (reader.Read())
@@ -68,7 +90,6 @@ namespace MyProject.Repository
 				topics = reader[0].ToString();
 			}
 			reader.Close();
-			_connectionString.Close();
 			return topics;
 		}
 
@@ -79,7 +100,6 @@ namespace MyProject.Repository
 			var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
 			command.CommandText = "SELECT authors FROM Papers WHERE idP = @id";
 			command.Parameters.AddWithValue("@id", id);
-			_connectionString.Open();
 			var reader = command.ExecuteReader();
 			string authors = "";
 			if (reader.Read())
@@ -87,7 +107,6 @@ namespace MyProject.Repository
                 authors = reader[0].ToString();
 			}
 			reader.Close();
-			_connectionString.Close();
             return authors;
 		}
 
@@ -98,7 +117,6 @@ namespace MyProject.Repository
 			var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
 			command.CommandText = "SELECT publisher FROM Papers WHERE idP = @id";
 			command.Parameters.AddWithValue("@id", id);
-			_connectionString.Open();
 			var reader = command.ExecuteReader();
 			string publisher = "";
 			if (reader.Read())
@@ -106,7 +124,6 @@ namespace MyProject.Repository
                 publisher = reader[0].ToString();
 			}
 			reader.Close();
-			_connectionString.Close();
             return publisher;
 		}
 
@@ -117,7 +134,6 @@ namespace MyProject.Repository
 			var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
 			command.CommandText = "SELECT datePaper FROM Papers WHERE idP = @id";
 			command.Parameters.AddWithValue("@id", id);
-			_connectionString.Open();
 			var reader = command.ExecuteReader();
 			int datePaper = 0;
 			if (reader.Read())
@@ -125,7 +141,6 @@ namespace MyProject.Repository
                 datePaper = Int32.Parse(reader[0].ToString());
 			}
 			reader.Close();
-			_connectionString.Close();
             return datePaper;
 		}
 
@@ -136,7 +151,6 @@ namespace MyProject.Repository
 			var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
 			command.CommandText = "SELECT pathPaper FROM Papers WHERE idP = @id";
 			command.Parameters.AddWithValue("@id", id);
-			_connectionString.Open();
 			var reader = command.ExecuteReader();
 			string pathPaper = "";
 			if (reader.Read())
@@ -144,7 +158,6 @@ namespace MyProject.Repository
                 pathPaper = reader[0].ToString();
 			}
 			reader.Close();
-			_connectionString.Close();
             return pathPaper;
 		}
 
@@ -155,7 +168,6 @@ namespace MyProject.Repository
 			var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
 			command.CommandText = "SELECT idLucrare FROM Papers WHERE idP = @id";
 			command.Parameters.AddWithValue("@id", id);
-			_connectionString.Open();
 			var reader = command.ExecuteReader();
 			int idLucrare = 0;
 			if (reader.Read())
@@ -163,7 +175,6 @@ namespace MyProject.Repository
                 idLucrare = Int32.Parse(reader[0].ToString());
 			}
 			reader.Close();
-			_connectionString.Close();
             return idLucrare;
 		}
 

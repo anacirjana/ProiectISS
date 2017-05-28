@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyProject.Domain
 {
-    class Paper
+    public class Paper
     {
         private int idP;
         private string title;
@@ -21,6 +21,7 @@ namespace MyProject.Domain
 
         public Paper()
         {
+            /*
             idP = 0;
             title = "";
             keywords = "";
@@ -30,9 +31,10 @@ namespace MyProject.Domain
             datePaper = "0/0/0";
             pathPaper = "";
             idSection = 0;
+            */
         }
         		
-        public Paper(int idp, string titlu, string keywrd, string topic, string author,string publishers, DateTime dateP, string pathPaper, int idS)
+        public Paper(int idp, string titlu, string keywrd, string topic, string author,string publishers, string dateP, string pathPaper, int idS)
 		{
 			idP = idp;
 			title = titlu;
@@ -134,7 +136,7 @@ namespace MyProject.Domain
             }
 		}
 
-        public DateTime DatePaper
+        public string DatePaper
 		{
 			get
 			{
