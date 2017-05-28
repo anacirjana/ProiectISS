@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="Controller\ControllerBiddings.cs" />
     <Compile Include="Controller\ControllerCommitteeMembers.cs" />
+    <Compile Include="Controller\ControllerReviews.cs" />
+    <Compile Include="Controller\ControllerSpeakers.cs" />
     <Compile Include="Domain\Abstract.cs" />
     <Compile Include="Domain\Bidding.cs" />
     <Compile Include="Domain\CommitteeMember.cs" />

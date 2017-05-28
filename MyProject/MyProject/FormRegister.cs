@@ -1,5 +1,6 @@
 using MyProject.Controller;
 using MyProject.Domain;
+using MyProject.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,14 +48,14 @@ namespace MyProject
             }
             else if (comboSel == "Listener")
             {
-                ControllerListeners ctrListners = new ControllerListeners();
+                ControllerListeners ctrListners = new ControllerListeners(new RepositoryListeners());
                 ctrListners.Register(new Listener(textBox3.Text,TextBoxPassword.Text,textBox1.Text,
                                                         textBox2.Text,textBox4.Text));
             }
             else if(comboSel == "Speaker")
             {
-                ControllerSpeakers ctrListners = new ControllerSpeakers();
-                ctrListners.Register(new Speaker(textBox3.Text, TextBoxPassword.Text, textBox1.Text,
+                ControllerSpeakers ctrSpeakers = new ControllerSpeakers(new RepositorySpeakers());
+				ctrSpeakers.Register(new Speaker(textBox3.Text, TextBoxPassword.Text, textBox1.Text,
                                                         textBox2.Text, textBox4.Text));
             }
         }
