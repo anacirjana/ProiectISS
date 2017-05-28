@@ -9,7 +9,7 @@ using MyProject.Repository;
 using MyProject.Utils;
 namespace MyProject.Repository
 {
-    class RepositoryPapers<Integer, Paper> : IRepository<int, Paper> where Paper: new()
+    public  class RepositoryPapers : IRepository<int, Paper>
     {
         public void Save(Paper p)
         {
