@@ -40,31 +40,18 @@ namespace MyProject.Repository
 
             _connectionString.Open();
             var reader = command.ExecuteReader();
-            var password = "";
-           
-            var firstName = "";
-            var surName = "";
-            var email = "";
-            string affiliation="";
-            string webpage="";
-            string role="";
 
+            CommitteeMember committeeMember = null;
             while (reader.Read())
             {
-                password = reader.GetString(1);
-                firstName = reader.GetString(2) ;
-                surName = reader.GetString(3);
-                email = reader.GetString(4);
-                webpage = reader.GetString(5);
-                affiliation = reader.GetString(6);
-                role = reader.GetString(7);
+                committeeMember = new CommitteeMember(username, reader.GetString(1), reader.GetString(2), reader.GetString(3), 
+                                        reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7));
             }
 
             reader.Close();
             _connectionString.Close();
-
-            CommitteeMember cm = new CommitteeMember(username,password, firstName, surName, email, webpage, affiliation, role);
-            return cm;  
+            
+            return committeeMember;  
         }               
         
         public IEnumerable<CommitteeMember> GetAll()  
