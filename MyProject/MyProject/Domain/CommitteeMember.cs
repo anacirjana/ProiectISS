@@ -66,7 +66,7 @@ namespace MyProject.Domain
 
         public override string ToString()
         {
-            return base.ToString() + this.webpage + this.affiliation + this.role;
+            return base.ToString()+ " " + this.affiliation + " " + this.webpage + " " + this.role;
         }
     }
 }
