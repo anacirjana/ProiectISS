@@ -16,6 +16,18 @@ namespace MyProject.Domain
             idP = 0;
             pathAbstract="";   
         }
+          
+        public Abstract(Int32 idP, String pathAbstract)
+        {
+            this.idP = idP;
+            this.pathAbstract = pathAbstract;
+        }
+
+        public Abstract(Abstract ab)
+        {
+            this.idP = ab.idP;
+            this.pathAbstract = ab.pathAbstract;
+        }
 
        public  Int32 Id
         {
