@@ -11,7 +11,7 @@ namespace MyProject.Domain
         private Int32 idP;
         private String pathAbstract;
         
-        public Abstract
+        public Abstract()
         {
             idP = 0;
             pathAbstract="";   
