@@ -35,10 +35,23 @@ namespace MyProject.Repository
         }
         public IEnumerable<Paper> GetAll()
         {
-            List<Paper> l = new List<Paper>();
-            Paper cm = new Paper();
-            l.Add(cm);
-            return l;
+            var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
+
+            List<Paper> papers = new List<Paper>();
+            command.CommandText = "SELECT * FROM Papers";
+            
+            var reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                papers.Add(new Paper(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), 
+                                     reader.GetString(3), reader.GetString(4), reader.GetString(5),
+                                     reader.GetString(6), reader.GetString(7), reader.GetInt32(8)));
+            }
+
+            reader.Close();
+
+            return papers;
         }
         //======================================================================
 
