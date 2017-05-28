@@ -46,10 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ControllerBiddings.cs" />
     <Compile Include="Controller\ControllerCommitteeMembers.cs" />
+    <Compile Include="Domain\Abstract.cs" />
+    <Compile Include="Domain\Bidding.cs" />
     <Compile Include="Domain\CommitteeMember.cs" />
     <Compile Include="Domain\IHasID.cs" />
     <Compile Include="Domain\Listener.cs" />
+    <Compile Include="Domain\Paper.cs" />
     <Compile Include="Domain\Review.cs" />
     <Compile Include="Domain\Speaker.cs" />
     <Compile Include="Domain\User.cs" />
@@ -76,9 +80,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\IValidator.cs" />
+    <Compile Include="Repository\RepositoryBiddings.cs" />
     <Compile Include="Repository\RepositoryCommitteeMembers.cs" />
     <Compile Include="Repository\RepositoryListeners.cs" />
+    <Compile Include="Repository\RepositoryPapers.cs" />
     <Compile Include="Repository\RepositoryReviews.cs" />
+    <Compile Include="Repository\RepositorySpeakers.cs" />
     <Compile Include="Utils\ConnectionFactory.cs" />
     <Compile Include="Utils\DBUtils.cs" />
     <Compile Include="Utils\SqlConnectionFactory.cs" />
