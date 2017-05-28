@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 using MyProject.Domain;
 using MyProject.Utils;
 using MyProject.Exception.MyProject.Exception;
-
+using MyProject.Repository;
 namespace MyProject.Repository
 {
-    class RepositoryListeners
+    class RepositoryListeners:IRepository<string,Listener>
     {
 
         public RepositoryListeners()
         {
         }
-        public void Save(CommitteeMember cm)
+        public void Save(Listener l)
         {
             var con = DBUtils.getConnection();
             using (var comm = con.CreateCommand())
@@ -24,27 +24,27 @@ namespace MyProject.Repository
                 comm.CommandText = "insert into Listeners(username,pass,firstName,surName,email) values (@username,@pass,@firstName,@surName,@email); ";
                 var paramUser = comm.CreateParameter();
                 paramUser.ParameterName = "@username";
-                paramUser.Value = cm.Username;
+                paramUser.Value = l.Username;
                 comm.Parameters.Add(paramUser);
 
                 var paramPass = comm.CreateParameter();
                 paramPass.ParameterName = "@pass";
-                paramPass.Value = cm.Password;
+                paramPass.Value = l.Password;
                 comm.Parameters.Add(paramPass);
 
                 var paramFName = comm.CreateParameter();
                 paramFName.ParameterName = "@firstName";
-                paramFName.Value = cm.FirstName;
+                paramFName.Value = l.FirstName;
                 comm.Parameters.Add(paramFName);
 
                 var paramSName = comm.CreateParameter();
                 paramSName.ParameterName = "@surName";
-                paramSName.Value = cm.SurName;
+                paramSName.Value = l.SurName;
                 comm.Parameters.Add(paramSName);
 
                 var paramEmail = comm.CreateParameter();
                 paramEmail.ParameterName = "@email";
-                paramEmail.Value = cm.Password;
+                paramEmail.Value = l.Password;
                 comm.Parameters.Add(paramEmail);
 
                 var result = comm.ExecuteNonQuery();
@@ -52,7 +52,7 @@ namespace MyProject.Repository
                     throw new RepositoryException("No listener added !");
             }
         }
-        public void Update(CommitteeMember cm1, CommitteeMember cm2)
+        public void Update(Listener l1, Listener l2)
         {
             var con = DBUtils.getConnection();
             using (var comm = con.CreateCommand())
@@ -60,27 +60,27 @@ namespace MyProject.Repository
                 comm.CommandText = "update Listeners set pass=@pass,firstName=@firstName,surName=@surName,email=@email where username=@username";
                 var paramPass = comm.CreateParameter();
                 paramPass.ParameterName = "@pass";
-                paramPass.Value = cm2.Password;
+                paramPass.Value = l2.Password;
                 comm.Parameters.Add(paramPass);
 
                 var paramFName = comm.CreateParameter();
                 paramFName.ParameterName = "@firstName";
-                paramFName.Value = cm2.FirstName;
+                paramFName.Value = l2.FirstName;
                 comm.Parameters.Add(paramFName);
 
                 var paramSName = comm.CreateParameter();
                 paramSName.ParameterName = "@surName";
-                paramSName.Value = cm2.SurName;
+                paramSName.Value = l2.SurName;
                 comm.Parameters.Add(paramSName);
 
                 var paramEmail = comm.CreateParameter();
                 paramEmail.ParameterName = "@email";
-                paramEmail.Value = cm2.Password;
+                paramEmail.Value = l2.Password;
                 comm.Parameters.Add(paramEmail);
 
                 var paramUser = comm.CreateParameter();
                 paramUser.ParameterName = "@username";
-                paramUser.Value = cm1.Username;
+                paramUser.Value = l1.Username;
                 comm.Parameters.Add(paramUser);
 
                 var result = comm.ExecuteNonQuery();
