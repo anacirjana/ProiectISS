@@ -10,7 +10,7 @@ namespace MyProject.Controller
 {
     class ControllerSpeakers
     {
-        RepositorySpeakers repo;
+        private RepositorySpeakers repo;
 
         public ControllerSpeakers(RepositorySpeakers r)
         {
@@ -25,9 +25,35 @@ namespace MyProject.Controller
             else
                 return new Speaker("", "", "", "", "");
 
-            Speaker sS=new Speaker();
-            return sS;
-
         }
+
+        public void addSpeaker(Speaker s)
+        {
+            repo.Save(s);
+        }
+
+        public void deleteSpeaker(string username)
+        {
+           
+            repo.Delete(username);
+        }
+
+        public void updateSpeaker(Speaker oldSpeaker, Speaker newSpeaker)
+        {
+            repo.Update(oldSpeaker, newSpeaker);
+        }
+
+        public Speaker getOneSpeaker(string username)
+        {
+          
+            return repo.GetOne(username);
+        }
+
+        public IEnumerable<Speaker> getAllSpeakers()
+        {
+            return repo.GetAll();
+        }
+
+
     }
 }
