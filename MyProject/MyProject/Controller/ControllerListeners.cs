@@ -10,7 +10,7 @@ namespace MyProject.Controller
     {
         private RepositoryListeners repo;
 
-        public ControllerListeners(RepositoryListeners r)
+        public ControllerListeners()
         {
             repo = new RepositorySpeakers();
         }
