@@ -21,7 +21,7 @@ namespace MyProject
             ctrlp = new ControllerPapers();
             loggedUser = cm;
             InitializeComponent();
-            List<Paper> paperList = (List<Paper>)ctrlp.getAllPapers();
+            List<Paper> paperList = (List<Paper>)ctrlp.GetAllPapers();
             foreach (Paper p in paperList)
             {
                 CheckedListBoxProposals.Items.Add(p.Title);
