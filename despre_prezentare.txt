@@ -1,0 +1,20 @@
+
+
+ In total prezentare : jumatate de ora
+--powerpoint, prezi, pdf, orice
+NU SCREENSHOTURI
+--prezentam munca (trello, git)
+
+DEMO APLICATIE
+ Aplicatia functionala
+ ! neaparat ceva vizual
+
+unit tests
++ test cases (->in bd sa punem ceva gen user:test, parola test)
+
+Manualul de utilizare - ne folosim de scenarii
+ (gen: pt a intra in aplicatia faceti nush ce...)
+
+ DIAGRAME
+ o sa ia diagramele pe rand si sa se uite la codul corespunzator
+
