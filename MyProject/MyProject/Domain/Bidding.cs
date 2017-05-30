@@ -12,6 +12,11 @@ namespace MyProject.Domain
         private int idPaper;
         private bool accepted;
 
+        public Bidding()
+        {
+
+        }
+
         public Bidding(string user, int paper, bool accept)
         {
             this.usernameCommitteeMember = user;
