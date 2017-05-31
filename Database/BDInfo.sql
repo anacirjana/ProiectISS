@@ -32,7 +32,7 @@ INSERT INTO Sections
 		   (3,'Enviroment')
 
 INSERT INTO Papers
-	VALUES (1,'Bayes Theorem','#spam#formula','Internet','Bill Overbeck','Science Daily','2017-05-20','path',2),
+	VALUES (1,'Bayes Theorem','#spam#formula','Internet','Bill Overbeck','Science Daily','2017-05-20','PathPapers/Bayes.docx',2),
 		   (2,'Fouriner Analysis','#frequance','Music','Racer Trey','Science Daily','2017-02-14','path',2),
 		   (3,'Cures For Epilepsy','#cure#venom','Innovations','Sara Tancredi','Med Talk','2017-03-23','path',1),
 		   (4,'Global Warming','#heat#world','Global Issues','Donna Pinciotti','World News','2017-04-02','path',3),
