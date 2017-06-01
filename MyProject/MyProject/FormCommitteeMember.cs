@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +19,7 @@ namespace MyProject
         CommitteeMember loggedUser;
         public FormCommitteeMember(CommitteeMember c)
         {
+            controllerCM = new ControllerCommitteeMembers();
             loggedUser = new CommitteeMember();
             loggedUser = c;
             
@@ -54,6 +55,30 @@ namespace MyProject
             FormBidProposals formBid = new FormBidProposals(loggedUser);
             
             formBid.Show();
+        }
+
+        private void chgDdlineLab_Click(object sender, EventArgs e)
+        {
+            ddLineCB.Visible = true;
+            dateTB.Visible = true;
+            ddLineBtn.Visible = true;
+
+            List<string> list = controllerCM.GetNames();
+            foreach(string s in list)
+            {
+                ddLineCB.Items.Add(s);
+            }
+        }
+
+        private void ddLineBtn_Click(object sender, EventArgs e)
+        {
+            string name = ddLineCB.SelectedItem.ToString();
+            DateTime date = Convert.ToDateTime(dateTB.Text);
+            controllerCM.ChangeDeadline(name, date);
+
+            ddLineCB.Visible = false;
+            dateTB.Visible = false;
+            ddLineBtn.Visible = false;
         }
     }
 }
