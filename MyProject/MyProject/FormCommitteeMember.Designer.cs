@@ -99,6 +99,8 @@ namespace MyProject
             this.chgDdlineLab.TabIndex = 10;
             this.chgDdlineLab.Text = "Change Deadline";
             this.chgDdlineLab.Click += new System.EventHandler(this.chgDdlineLab_Click);
+            this.chgDdlineLab.MouseLeave += new System.EventHandler(this.chgDdlineLab_MouseLeave);
+            this.chgDdlineLab.MouseHover += new System.EventHandler(this.chgDdlineLab_MouseHover);
             // 
             // ddLineCB
             // 
@@ -143,7 +145,7 @@ namespace MyProject
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormCommitteeMember";
             this.Text = "Form1";
             this.ResumeLayout(false);
