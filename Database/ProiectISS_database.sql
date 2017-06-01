@@ -52,7 +52,7 @@ create table Speakers(
 );
 
 create table Reviews(
-	idR int primary key,
+	idR int primary key identity(1,1),
 	username nvarchar(10) references CommitteeMembers(username),
 	idP int references Papers(idP),
 	qualifier nvarchar(20) ,

@@ -56,9 +56,14 @@ namespace MyProject
 			object readOnly = true;
 			Microsoft.Office.Interop.Word.Document docs = word.Documents.Open(ref path, ref miss, ref readOnly, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss);
 			string totaltext = docs.Content.Text;
+           
+           // PaperContent
+            //docs.Content.
 			docs.Close();
 			word.Quit();
-			PaperContent.Text = totaltext;
+            // PaperContent.Rtf = totaltext;
+            PaperContent.Font = new Font("Trebuchet MS",13);
+           PaperContent.Text = totaltext;
 
 		}
 
@@ -80,6 +85,11 @@ namespace MyProject
                     ctrlb.addBidding(b);
                 }
             }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

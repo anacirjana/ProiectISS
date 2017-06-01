@@ -53,3 +53,7 @@ C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProje
 C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormRegister.resources
 C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.Properties.Resources.resources
 C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.csproj.GenerateResource.Cache
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.csproj.ResolveComReference.cache
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.FormListener.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.FormSpeaker.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.Reviews.resources

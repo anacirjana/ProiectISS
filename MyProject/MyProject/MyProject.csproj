@@ -113,6 +113,12 @@
     <Compile Include="Repository\RepositoryPapers.cs" />
     <Compile Include="Repository\RepositoryReviews.cs" />
     <Compile Include="Repository\RepositorySpeakers.cs" />
+    <Compile Include="Reviews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reviews.Designer.cs">
+      <DependentUpon>Reviews.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\ConnectionFactory.cs" />
     <Compile Include="Utils\DBUtils.cs" />
     <Compile Include="Utils\SqlConnectionFactory.cs" />
@@ -143,6 +149,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reviews.resx">
+      <DependentUpon>Reviews.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -156,9 +165,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TextFile.txt" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="InteropExtensionLib">

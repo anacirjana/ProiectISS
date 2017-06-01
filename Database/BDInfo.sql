@@ -50,12 +50,12 @@ INSERT INTO Speakers
 		   ('AbbyM','ablly','abby@gmail.com','Mills','Abby',5)
 
 INSERT INTO Reviews
-	VALUES (1,'SonyaB',2,'accept','Should use a more formal approach.'),
-		   (2,'AndiP',5,'strong accept','No comment.'),
-		   (3,'StevenH',3,'weak accept','More examples.'),
-		   (4,'JohnnyC',2,'strong accept','Interesting idea for undersatanding how to copy music.'),
-		   (5,'BenG',4,'accept','Cannot wait for the presentation.'),
-		   (6,'ChandlerB',1,'weak accept','Would need a liitle more documentation')
+	VALUES ('SonyaB',2,'accept','Should use a more formal approach.'),
+		   ('AndiP',5,'strong accept','No comment.'),
+		   ('StevenH',3,'weak accept','More examples.'),
+		   ('JohnnyC',2,'strong accept','Interesting idea for undersatanding how to copy music.'),
+		   ('BenG',4,'accept','Cannot wait for the presentation.'),
+		   ('ChandlerB',1,'weak accept','Would need a liitle more documentation')
 
 INSERT INTO Bidding
 	VALUES ('ElaineB',1,1),
