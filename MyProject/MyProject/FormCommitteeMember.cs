@@ -80,5 +80,15 @@ namespace MyProject
             dateTB.Visible = false;
             ddLineBtn.Visible = false;
         }
+
+        private void chgDdlineLab_MouseHover(object sender, EventArgs e)
+        {
+            chgDdlineLab.ForeColor = Color.Red;
+        }
+
+        private void chgDdlineLab_MouseLeave(object sender, EventArgs e)
+        {
+            chgDdlineLab.ForeColor = Color.DeepSkyBlue;
+        }
     }
 }
