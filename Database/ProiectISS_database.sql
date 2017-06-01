@@ -9,8 +9,8 @@ use ProiectISS
 create table CommitteeMembers(
 	username nvarchar(10) primary key,
 	pass nvarchar(10),
-	firstName nvarchar(10),
-	surName nvarchar(10),
+	firstName nvarchar(20),
+	surName nvarchar(20),
 	email nvarchar(30),
 	webPage nvarchar(20),
 	affiliation nvarchar(15),
@@ -63,5 +63,11 @@ create table Bidding(
 	usernameCommitteeMember nvarchar(10) references CommitteeMembers(username),
 	idP int references Papers(idP),
 	accepted bit
+	primary key(usernameCommitteeMember,idP)
 );
-insert into CommitteeMembers values ('ion_53','secret','Ion','Marinescu','ionica53@yahoo.com','','physics','chair')
+
+create table Deadlines(
+	name nvarchar(15),
+	deadline date
+	primary key(name,deadline)
+);
