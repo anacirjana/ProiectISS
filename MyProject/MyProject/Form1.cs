@@ -14,8 +14,10 @@ namespace MyProject
 {
     public partial class Form1 : Form
     {
-        RepositoryCommitteeMembers repositoryCM;
         ControllerCommitteeMembers controllerCM;
+        ControllerListeners controllerL;
+        ControllerSpeakers controllerS;
+
         public Form1()
         {
             controllerCM = new ControllerCommitteeMembers();
@@ -41,28 +43,28 @@ namespace MyProject
             else
                  if (item == "Listener")
             {
-                /*
-                Listener l= controllerL.Login(username, password);
+                
+                Listener l = controllerL.Login(username, password); 
                 if (l.Username == username) //login successful
                 {
                     this.Hide();
-                    Form2 secondform = new Form2(cm);
+                    Form1 secondform = new Form1();
                     secondform.Show();
                 }
-                */
+                
             }
             else
                  if (item == "Speaker")
             {
-                /*
-                Listener l= controllerL.Login(username, password);
-                if (l.Username == username) //login successful
+                
+                Speaker s = controllerS.Login(username, password);
+                if (s.Username == username) //login successful
                 {
                     this.Hide();
-                    Form2 secondform = new Form2(cm);
+                    Form1 secondform = new Form1();
                     secondform.Show();
                 }
-                */
+                
             }
 
         }
