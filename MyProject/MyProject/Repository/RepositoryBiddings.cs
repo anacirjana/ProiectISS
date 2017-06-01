@@ -26,7 +26,10 @@ namespace MyProject.Repository
          
             command.Parameters.AddWithValue("@username", elem.UsernameCommitteeMember);
             command.Parameters.AddWithValue("@idP", elem.IdPaper);
-            command.Parameters.AddWithValue("@accepted", elem.Accepted);
+            if (elem.Accepted==true)    
+                command.Parameters.AddWithValue("@accepted", 1);
+            else
+                command.Parameters.AddWithValue("@accepted", 0);
 
             command.ExecuteNonQuery();
         }

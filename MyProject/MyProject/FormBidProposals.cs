@@ -19,10 +19,12 @@ namespace MyProject
     {
         CommitteeMember loggedUser;
         ControllerPapers ctrlp;
+        ControllerBiddings ctrlb;
         public FormBidProposals(CommitteeMember cm)
         {
             loggedUser = new CommitteeMember();
             ctrlp = new ControllerPapers();
+            ctrlb = new ControllerBiddings();
             loggedUser = cm;
             InitializeComponent();
             List<Paper> paperList = (List<Paper>)ctrlp.GetAllPapers();
@@ -56,5 +58,25 @@ namespace MyProject
 			PaperContent.Text = totaltext;
 
 		}
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int i=0;i< CheckedListBoxProposals.Items.Count;i++)
+            {
+                string s = (string)CheckedListBoxProposals.Items[i];
+                string[] res = s.Split('.');
+                int id;
+                int.TryParse(res[0], out id);
+                if (CheckedListBoxProposals.GetItemCheckState(i) == CheckState.Checked)
+                {
+                    Bidding b = new Bidding(loggedUser.Username, id, true);
+                    ctrlb.addBidding(b);
+                }else
+                {
+                    Bidding b = new Bidding(loggedUser.Username, id, false);
+                    ctrlb.addBidding(b);
+                }
+            }
+        }
     }
 }
