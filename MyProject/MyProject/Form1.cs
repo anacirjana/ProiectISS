@@ -21,6 +21,8 @@ namespace MyProject
         public Form1()
         {
             controllerCM = new ControllerCommitteeMembers();
+            controllerL = new ControllerListeners();
+            controllerS = new ControllerSpeakers();
             InitializeComponent();
             
         }
