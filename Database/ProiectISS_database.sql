@@ -38,7 +38,7 @@ create table Papers(
 	authors nvarchar(50),
 	publisher nvarchar(20),
 	datePaper date,
-	pathPaper nvarchar(30),
+	pathPaper nvarchar(100),
 	idSection int references Sections(idS)
 );
 

@@ -32,13 +32,13 @@ INSERT INTO Sections
 		   (3,'Enviroment')
 
 INSERT INTO Papers
-	VALUES (1,'Bayes Theorem','#spam#formula','Internet','Bill Overbeck','Science Daily','05-20-2017','path',2),
-		   (2,'Fouriner Analysis','#frequance','Music','Racer Trey','Science Daily','02-14-2017','path',2),
-		   (3,'Cures For Epilepsy','#cure#venom','Innovations','Sara Tancredi','Med Talk','03-23-2017','path',1),
-		   (4,'Global Warming','#heat#world','Global Issues','Donna Pinciotti','World News','04-02-2017','path',3),
-		   (5,'Travelling Salesman','#graph#criminology','Math','Abby Mills','Math Today','03-20-2017','path',2),
-		   (6,'Limitless Pill','#memory#pill','Innovations','Morgan Gretchen','Med Talk','02-13-2017','path',1),
-		   (7,'Saving The World','#world#all','Global Issues','Ross Geller','World News','04-20-2017','path',3)
+	VALUES (1,'Bayes Theorem','#spam#formula','Internet','Bill Overbeck','Science Daily','05-20-2017','PaperContents/Bayes.docx',2),
+		   (2,'Fouriner Analysis','#frequance','Music','Racer Trey','Science Daily','02-14-2017','PaperContents/Fournier.docx',2),
+		   (3,'Cures For Epilepsy','#cure#venom','Innovations','Sara Tancredi','Med Talk','03-23-2017','PaperContents/Epilepsy.docx',1),
+		   (4,'Global Warming','#heat#world','Global Issues','Donna Pinciotti','World News','04-02-2017','PaperContents/GlobalWarm.docx',3),
+		   (5,'Travelling Salesman','#graph#criminology','Math','Abby Mills','Math Today','03-20-2017','PaperContents/TravelingSalesman.docx',2),
+		   (6,'Limitless Pill','#memory#pill','Innovations','Morgan Gretchen','Med Talk','02-13-2017','PaperContents/LimitlessPill.docx',1),
+		   (7,'Saving The World','#world#all','Global Issues','Ross Geller','World News','04-20-2017','PaperContents/SavingtheWorld.docx',3)
 
 INSERT INTO Speakers
 	VALUES ('SaraT','pass1919','tancredi@gmail.com','Tancredi','Sara',3),
