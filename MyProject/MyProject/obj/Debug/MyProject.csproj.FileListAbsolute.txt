@@ -43,3 +43,13 @@ C:\Users\Cata\Documents\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.exe.c
 C:\Users\Cata\Documents\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.exe
 C:\Users\Cata\Documents\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.pdb
 C:\Users\Cata\Documents\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormListener.resources
+C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.exe
+C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.pdb
+C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.csprojResolveAssemblyReference.cache
+C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.Form1.resources
+C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormBidProposals.resources
+C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormCommitteeMember.resources
+C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormListener.resources
+C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormRegister.resources
+C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.Properties.Resources.resources
+C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.csproj.GenerateResource.Cache

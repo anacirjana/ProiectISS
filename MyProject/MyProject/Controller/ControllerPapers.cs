@@ -38,6 +38,11 @@ namespace MyProject.Controller
             return repop.GetAll();
         }
 
+        public IEnumerable<Paper> GetAllAcceptedPapers()
+        {
+            return repop.GetAllAccepted();
+        }
+
         public string GetTitle(int id)
         {
             return repop.GetTitle(id);

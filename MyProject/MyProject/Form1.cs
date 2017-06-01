@@ -21,6 +21,8 @@ namespace MyProject
         public Form1()
         {
             controllerCM = new ControllerCommitteeMembers();
+            controllerL = new ControllerListeners();
+            controllerS = new ControllerSpeakers();
             InitializeComponent();
             
         }
@@ -48,7 +50,7 @@ namespace MyProject
                 if (l.Username == username) //login successful
                 {
                     this.Hide();
-                    Form1 secondform = new Form1();
+                    FormListener secondform = new FormListener(l);
                     secondform.Show();
                 }
                 
@@ -67,6 +69,14 @@ namespace MyProject
                 
             }
 
+        }
+
+        private void TextBoxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)

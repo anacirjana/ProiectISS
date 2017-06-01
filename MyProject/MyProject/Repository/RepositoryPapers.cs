@@ -53,6 +53,29 @@ namespace MyProject.Repository
 
             return papers;
         }
+
+        public IEnumerable<Paper> GetAllAccepted()
+        {
+            var command = (SqlCommand)DBUtils.getConnection().CreateCommand();
+
+            List<Paper> papers = new List<Paper>();
+            command.CommandText = "SELECT * FROM Papers WHERE idP NOT IN (SELECT idP FROM Reviews WHERE qualifier IN ('reject','strong reject','weak reject'))";
+
+            var reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                papers.Add(new Paper(reader.GetInt32(0), reader.GetString(1), reader.GetString(2),
+                                     reader.GetString(3), reader.GetString(4), reader.GetString(5),
+                                     reader[6].ToString(), reader[7].ToString(), reader.GetInt32(8)));
+            }
+
+            reader.Close();
+
+            return papers;
+        }
+
+
         //======================================================================
 
         public string GetTitle(int id)
