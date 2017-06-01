@@ -25,9 +25,8 @@ namespace MyProject.Domain
 		}
 
 		//Parametrised Constructor
-		public Review(int idr, string user, int idp, string qualif, string comm)
+		public Review( string user, int idp, string qualif, string comm)
 		{
-			IdR = idr;
 			UsernameCommiteeMember = user;
 			IdP = idp;
 			Qualifier = qualif;

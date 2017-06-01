@@ -15,7 +15,7 @@ namespace MyProject.Utils
             //string connectionString = "Data Source=DESKTOP-NVKMTUP\\MSSQLSERVER01;" +
             //"Initial Catalog = ProiectISS; Integrated Security = True";
 
-            string connectionString = "Data Source=DESKTOP-DMVLDS4\\SQLEXPRESS;" +
+            string connectionString = "Data Source=CARMEN\\SQLEXPRESS;" +
            "Initial Catalog = ProiectISS; Integrated Security = True";
             return new SqlConnection(connectionString);
         }

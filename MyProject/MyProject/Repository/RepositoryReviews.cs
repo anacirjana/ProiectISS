@@ -92,8 +92,9 @@ namespace MyProject.Repository
 		{
 			var _connectionString = DBUtils.getConnection();
 			var command = (SqlCommand)_connectionString.CreateCommand();
-			command.CommandText = @"INSERT INTO Reviews(username, idP, qualifier, comment)
+			command.CommandText = @"INSERT INTO Reviews(idR, username, idP, qualifier, comment)
 					VALUES (@idR, @username, @idP, @qualifier, @comment)";
+			command.Parameters.AddWithValue("@idR", elem.IdR);
 			command.Parameters.AddWithValue("@username", elem.UsernameCommiteeMember);
 			command.Parameters.AddWithValue("@idP", elem.IdP);
 			command.Parameters.AddWithValue("@qualifier", elem.Qualifier);
@@ -167,5 +168,42 @@ namespace MyProject.Repository
 			command.Parameters.AddWithValue("@comment", e2.Comment);
 			command.ExecuteNonQuery();
 		}
+
+        public List<int> GetPapersforUser(string username)
+        {
+            List<int> list = new List<int>();
+            var _connectionString = DBUtils.getConnection();
+            var command = (SqlCommand)_connectionString.CreateCommand();
+            command.CommandText = "SELECT idP FROM Reviews WHERE username = @username";
+            command.Parameters.AddWithValue("@username", username);
+
+            var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                list.Add(reader.GetInt32(0));
+            }
+            reader.Close();
+
+            return list;
+        }
+
+        public int getReviewId(string username, int idP)
+        {
+            var _connectionString = DBUtils.getConnection();
+            var command = (SqlCommand)_connectionString.CreateCommand();
+            command.CommandText = "SELECT idR FROM Reviews WHERE username = @username AND idP = @idP";
+            command.Parameters.AddWithValue("@username", username);
+            command.Parameters.AddWithValue("@idP", idP);
+
+            var reader = command.ExecuteReader();
+            int idReview = 0;
+            while(reader.Read())
+            {
+                idReview = reader.GetInt32(0);
+            }
+
+            reader.Close();
+            return idReview;
+        }
 	}
 }

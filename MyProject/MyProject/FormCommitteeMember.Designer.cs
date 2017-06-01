@@ -36,6 +36,7 @@ namespace MyProject
             this.ddLineCB = new System.Windows.Forms.ComboBox();
             this.dateTB = new System.Windows.Forms.TextBox();
             this.ddLineBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -130,12 +131,26 @@ namespace MyProject
             this.ddLineBtn.Visible = false;
             this.ddLineBtn.Click += new System.EventHandler(this.ddLineBtn_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label3.Location = new System.Drawing.Point(30, 169);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 26);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Add reviews";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // FormCommitteeMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(699, 409);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.ddLineBtn);
             this.Controls.Add(this.dateTB);
             this.Controls.Add(this.ddLineCB);
@@ -163,6 +178,7 @@ namespace MyProject
         private System.Windows.Forms.ComboBox ddLineCB;
         private System.Windows.Forms.TextBox dateTB;
         private System.Windows.Forms.Button ddLineBtn;
+        private System.Windows.Forms.Label label3;
     }
 }
 

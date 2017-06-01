@@ -90,5 +90,20 @@ namespace MyProject
         {
             chgDdlineLab.ForeColor = Color.DeepSkyBlue;
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            if(DateTime.Today > controllerCM.GetTime())
+            {
+                this.Hide();
+                string username = loggedUser.Username;
+                Reviews formReview = new Reviews(username);
+                formReview.Show();
+            }
+            else
+            {
+                MessageBox.Show("The bidding phase is not over yet!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

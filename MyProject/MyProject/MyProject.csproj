@@ -167,6 +167,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TextFile.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <COMReference Include="InteropExtensionLib">
       <Guid>{C3D19104-7A67-4EB0-B459-D5B2E734D430}</Guid>
       <VersionMajor>1</VersionMajor>

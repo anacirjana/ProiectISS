@@ -153,5 +153,22 @@ namespace MyProject.Repository
             command.Parameters.AddWithValue("@name", name);
             command.ExecuteNonQuery();
         }
+
+        public DateTime GetDeadline()
+        {
+            var command = (SqlCommand)_connectionString.CreateCommand();
+            command.CommandText = "SELECT deadline FROM Deadlines WHERE name = @name";
+            command.Parameters.AddWithValue("@name", "Bidding");
+            var reader = command.ExecuteReader();
+
+            DateTime date = default(DateTime);
+            while (reader.Read())
+            {
+                date = reader.GetDateTime(0);
+            }
+
+            reader.Close();
+            return date;
+        }
     }
 }
