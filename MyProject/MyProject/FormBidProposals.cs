@@ -6,11 +6,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyProject.Domain;
+using Microsoft.Office;
 using MyProject.Controller;
+using System.Reflection;
 
 namespace MyProject
 {
@@ -45,7 +46,8 @@ namespace MyProject
             int.TryParse(res[0], out id);
 			Microsoft.Office.Interop.Word.Application word = new Microsoft.Office.Interop.Word.Application();
 			object miss = System.Reflection.Missing.Value;
-			object path = @"D:\Facultate\ISS\ProiectISS\MyProject\MyProject\PaperContents\Bayes.docx";
+            string ExecutableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+			object path = Path.Combine(ExecutableLocation,"PaperContents/Bayes.docx");
 			object readOnly = true;
 			Microsoft.Office.Interop.Word.Document docs = word.Documents.Open(ref path, ref miss, ref readOnly, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss);
 			string totaltext = docs.Content.Text;
