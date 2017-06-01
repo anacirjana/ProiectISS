@@ -160,6 +160,17 @@ namespace MyProject.Domain
                 idSection = value;
 			}
 		}
+        public string PathPaper
+        {
+            get
+            {
+                return pathPaper;
+            }
+            set
+            {
+                pathPaper = value;
+            }
+        }
 	}
 }
 

@@ -49,7 +49,10 @@ namespace MyProject
 			Microsoft.Office.Interop.Word.Application word = new Microsoft.Office.Interop.Word.Application();
 			object miss = System.Reflection.Missing.Value;
             string ExecutableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-			object path = Path.Combine(ExecutableLocation,"PaperContents/Bayes.docx");
+            string pathh = ctrlp.GetPathPaper(id);
+            string[] dirfile = pathh.Split('/');
+            string fin = dirfile[0] + "\\" + dirfile[1];
+            object path = Path.Combine(ExecutableLocation,fin);
 			object readOnly = true;
 			Microsoft.Office.Interop.Word.Document docs = word.Documents.Open(ref path, ref miss, ref readOnly, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss);
 			string totaltext = docs.Content.Text;

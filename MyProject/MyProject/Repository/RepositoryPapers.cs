@@ -11,13 +11,33 @@ namespace MyProject.Repository
 {
     public  class RepositoryPapers : IRepository<int, Paper>
     {
-        public void Save(Paper p)
-        {
-            //nu trebuie
-        }
         public void Update(Paper p1, Paper p2)
         {
-
+            var _connectionString = DBUtils.getConnection();
+            var command = (SqlCommand)_connectionString.CreateCommand();
+            command.CommandText = @"UPDATE Papers SET title = @title, idSection = @idSection, keywords = @keywords, topics = @topics, authors = @authors, publisher = @publisher, datePaper = @datePaper, pathPaper = @pathPaper WHERE idP = @idP";
+            command.Parameters.AddWithValue("@idP", p1.IdP);
+            command.Parameters.AddWithValue("@title", p2.Title);
+            command.Parameters.AddWithValue("@keywors", p2.Keywords);
+            command.Parameters.AddWithValue("@topics", p2.Topics);
+            command.Parameters.AddWithValue("@authors", p2.Authors);
+            command.Parameters.AddWithValue("@publisher", p2.Publisher);
+            command.Parameters.AddWithValue("@datePaper", p2.DatePaper);
+            command.Parameters.AddWithValue("@pathPaper", p2.PathPaper);
+            command.Parameters.AddWithValue("@idSection", p2.IdSection);
+            command.ExecuteNonQuery();
+        }
+        public void Save(Paper elem)
+        {
+            var _connectionString = DBUtils.getConnection();
+            var command = (SqlCommand)_connectionString.CreateCommand();
+            command.CommandText = @"INSERT INTO Papers(idP, title, keywords, topics, authors, publisher, datePaper, pathPaper, idSection)                     VALUES (@idP, @title, @keywords, @topics, @authors, @publisher, @datePaper, @pathPaper, @idSection)";
+            command.Parameters.AddWithValue("@idP", elem.IdP);
+            command.Parameters.AddWithValue("@title", elem.Title);
+            command.Parameters.AddWithValue("@keywors", elem.Keywords);
+            command.Parameters.AddWithValue("@topics", elem.Topics);
+            command.Parameters.AddWithValue("@authors", elem.Authors);             command.Parameters.AddWithValue("@publisher", elem.Publisher);             command.Parameters.AddWithValue("@datePaper", elem.DatePaper);             command.Parameters.AddWithValue("@pathPaper", elem.PathPaper);             command.Parameters.AddWithValue("@idSection", elem.IdSection);
+            command.ExecuteNonQuery();
         }
         public void Delete(int id)
         {
