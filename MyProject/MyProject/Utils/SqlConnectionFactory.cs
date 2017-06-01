@@ -14,7 +14,6 @@ namespace MyProject.Utils
         {
             string connectionString = "Data Source=desktop-dmvlds4\\sqlexpress; " +
             "Initial Catalog = ProiectISS; Integrated Security = True";
-
             return new SqlConnection(connectionString);
         }
     }

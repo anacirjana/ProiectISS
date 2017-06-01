@@ -1,12 +1,23 @@
-C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.exe.config
-C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.exe
-C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.pdb
-C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.csprojResolveAssemblyReference.cache
-C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.Form1.resources
-C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormBidProposals.resources
-C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormCommitteeMember.resources
-C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormRegister.resources
-C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.Properties.Resources.resources
-C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.csproj.GenerateResource.Cache
-C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.exe
-C:\Users\omg_s\Documents\GitHub\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.pdb
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.exe.config
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.csprojResolveAssemblyReference.cache
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.Form1.resources
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormCommitteeMember.resources
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormRegister.resources
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.Properties.Resources.resources
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.csproj.GenerateResource.Cache
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.exe
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\bin\Debug\MyProject.pdb
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.exe
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.pdb
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\bin\Debug\MyProject.exe.config
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.exe
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.pdb
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\bin\Debug\MyProject.exe
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\bin\Debug\MyProject.pdb
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.csprojResolveAssemblyReference.cache
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.Form1.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.FormCommitteeMember.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.FormRegister.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.Properties.Resources.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.csproj.GenerateResource.Cache
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.FormBidProposals.resources

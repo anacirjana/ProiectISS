@@ -29,20 +29,31 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.CheckedListBoxProposals = new System.Windows.Forms.CheckedListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PaperContent = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MintCream;
+            this.panel1.Controls.Add(this.PaperContent);
             this.panel1.Controls.Add(this.CheckedListBoxProposals);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(930, 503);
             this.panel1.TabIndex = 2;
+            // 
+            // CheckedListBoxProposals
+            // 
+            this.CheckedListBoxProposals.FormattingEnabled = true;
+            this.CheckedListBoxProposals.Location = new System.Drawing.Point(23, 89);
+            this.CheckedListBoxProposals.Name = "CheckedListBoxProposals";
+            this.CheckedListBoxProposals.Size = new System.Drawing.Size(351, 395);
+            this.CheckedListBoxProposals.TabIndex = 1;
+            this.CheckedListBoxProposals.SelectedIndexChanged += new System.EventHandler(this.CheckedListBoxProposals_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -55,13 +66,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Bid proposals";
             // 
-            // CheckedListBoxProposals
+            // PaperContent
             // 
-            this.CheckedListBoxProposals.FormattingEnabled = true;
-            this.CheckedListBoxProposals.Location = new System.Drawing.Point(23, 89);
-            this.CheckedListBoxProposals.Name = "CheckedListBoxProposals";
-            this.CheckedListBoxProposals.Size = new System.Drawing.Size(896, 395);
-            this.CheckedListBoxProposals.TabIndex = 1;
+            this.PaperContent.BackColor = System.Drawing.Color.Bisque;
+            this.PaperContent.Location = new System.Drawing.Point(413, 89);
+            this.PaperContent.MaxLength = 100000;
+            this.PaperContent.Multiline = true;
+            this.PaperContent.Name = "PaperContent";
+            this.PaperContent.ReadOnly = true;
+            this.PaperContent.Size = new System.Drawing.Size(491, 395);
+            this.PaperContent.TabIndex = 3;
             // 
             // FormBidProposals
             // 
@@ -83,5 +97,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox CheckedListBoxProposals;
+        private System.Windows.Forms.TextBox PaperContent;
     }
 }

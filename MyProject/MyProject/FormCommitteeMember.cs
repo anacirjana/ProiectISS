@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MyProject.Domain;
 using MyProject.Repository;
 using MyProject.Controller;
+
 namespace MyProject
 {
     public partial class FormCommitteeMember : Form
@@ -51,6 +52,7 @@ namespace MyProject
         {
             this.Hide();
             FormBidProposals formBid = new FormBidProposals(loggedUser);
+            
             formBid.Show();
         }
     }
