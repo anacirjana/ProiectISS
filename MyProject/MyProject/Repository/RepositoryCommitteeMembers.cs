@@ -126,5 +126,32 @@ namespace MyProject.Repository
 
             return rang;
         }
+        
+        public List<string> GetNames()
+        {
+            List<string> list = new List<string>();
+            var command = (SqlCommand)_connectionString.CreateCommand();
+            command.CommandText = "SELECT name FROM Deadlines";
+
+            var reader = command.ExecuteReader();
+            
+            while (reader.Read())
+            {
+                list.Add(reader.GetString(0));
+            }
+
+            reader.Close();
+
+            return list;
+        }
+
+        public void ChangeDeadline(string name, DateTime date)
+        {
+            var command = (SqlCommand)_connectionString.CreateCommand();
+            command.CommandText = "UPDATE Deadlines SET deadline = @date WHERE name = @name"; 
+            command.Parameters.AddWithValue("@date",date);
+            command.Parameters.AddWithValue("@name", name);
+            command.ExecuteNonQuery();
+        }
     }
 }
