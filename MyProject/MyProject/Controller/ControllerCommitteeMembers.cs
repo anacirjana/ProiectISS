@@ -24,5 +24,15 @@ namespace MyProject.Controller
                 return new CommitteeMember("", "", "", "", "", "", "", "");
 
         }
+        
+        public List<string> GetNames()
+        {
+            return repo.GetNames();
+        }
+
+        public void ChangeDeadline(string name, DateTime date)
+        {
+            repo.ChangeDeadline(name, date);
+        }
     }
 }

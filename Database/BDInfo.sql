@@ -72,4 +72,5 @@ INSERT INTO Bidding
 
 INSERT INTO Deadlines 
 	VALUES ('Abstract','02-20-2017'),
-		   ('Paper','06-20-2017')
+		   ('Paper','06-20-2017'),
+		   ('Bidding','04-20-2017')
