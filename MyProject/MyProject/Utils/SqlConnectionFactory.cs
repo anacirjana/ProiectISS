@@ -12,7 +12,7 @@ namespace MyProject.Utils
     {
         public override IDbConnection createConnection()
         {
-            string connectionString = "Data Source=desktop-dmvlds4\\sqlexpress; " +
+            string connectionString = "Data Source=DESKTOP-CTFV86O\\SQLEXPRESS; " +
             "Initial Catalog = ProiectISS; Integrated Security = True";
             return new SqlConnection(connectionString);
         }

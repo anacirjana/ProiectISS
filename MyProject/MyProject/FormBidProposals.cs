@@ -43,11 +43,16 @@ namespace MyProject
             string[] res = t.Split('.');
             int id;
             int.TryParse(res[0], out id);
-            //string readText = File.ReadAllText(ctrlp.getContent(id));
-            string readText = File.ReadAllText("C:\\Users\\Ana Cirjan\\Documents\\info\\An 2 Sem 2 EU\\ISS\\MyProject\\MyProject\\PaperContents\\Bayes.docx");
-            //Console.WriteLine(readText);
-            PaperContent.Text = readText;
-            
-        }
+			Microsoft.Office.Interop.Word.Application word = new Microsoft.Office.Interop.Word.Application();
+			object miss = System.Reflection.Missing.Value;
+			object path = @"D:\Facultate\ISS\ProiectISS\MyProject\MyProject\PaperContents\Bayes.docx";
+			object readOnly = true;
+			Microsoft.Office.Interop.Word.Document docs = word.Documents.Open(ref path, ref miss, ref readOnly, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss);
+			string totaltext = docs.Content.Text;
+			docs.Close();
+			word.Quit();
+			PaperContent.Text = totaltext;
+
+		}
     }
 }

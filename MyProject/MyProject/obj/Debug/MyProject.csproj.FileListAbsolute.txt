@@ -21,3 +21,6 @@ C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Deb
 C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.Properties.Resources.resources
 C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.csproj.GenerateResource.Cache
 C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProject\MyProject\obj\Debug\MyProject.FormBidProposals.resources
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormBidProposals.resources
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\Interop.InteropExtensionLib.dll
+D:\Facultate\ISS\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.csproj.ResolveComReference.cache
