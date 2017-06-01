@@ -9,8 +9,8 @@ INSERT INTO CommitteeMembers
 		   ('SonyaB','sonya7','Blade','Sonya','blade@hotmali.com','www.blazer.com','Medicine','chair'),
 		   ('JohnnyC','johncg','Cage','Johnny','johnny@yahoo.com','www.cage.ro','Astrology','chair'),
 		   ('TonyA','alme12','Almeida','Tony','almeida@gmail.com','www.almaton.fr','Math&CS','normal'),
-		   ('ChandlerB','bingbing','Bing','Chandler','chand@hotmail.com','www.bingit.ro','Math&CS','chair'),
-		   ('AndiP','prenda','Prendergst','Andi','andi@yahoo.com','www.prender.ro','Medicine','chair'),
+		   ('ChandlerB','bingbing','Bing','Chandler','chandler@hotmail.com','www.bingit.ro','Math&CS','chair'),
+		   ('AndiP','prenda','Prendergast','Andi','andi@yahoo.com','www.prender.ro','Medicine','chair'),
 		   ('MortimerM','morty','Manta','Mortimer','manta@gmail.com','www.mortimer.com','Astrology','normal')
 
 INSERT INTO Listeners
@@ -32,13 +32,13 @@ INSERT INTO Sections
 		   (3,'Enviroment')
 
 INSERT INTO Papers
-	VALUES (1,'Bayes Theorem','#spam#formula','Internet','Bill Overbeck','Science Daily','2017-05-20','PathPapers/Bayes.docx',2),
-		   (2,'Fouriner Analysis','#frequance','Music','Racer Trey','Science Daily','2017-02-14','path',2),
-		   (3,'Cures For Epilepsy','#cure#venom','Innovations','Sara Tancredi','Med Talk','2017-03-23','path',1),
-		   (4,'Global Warming','#heat#world','Global Issues','Donna Pinciotti','World News','2017-04-02','path',3),
-		   (5,'Travelling Salesman','#graph#criminology','Math','Abby Mills','Math Today','2017-03-20','path',2),
-		   (6,'Limitless Pill','#memory#pill','Innovations','Morgan Gretchen','Med Talk','2017-02-13','path',1),
-		   (7,'Saving The World','#world#all','Global Issues','Ross Geller','World News','2017-04-12','path',3)
+	VALUES (1,'Bayes Theorem','#spam#formula','Internet','Bill Overbeck','Science Daily','05-20-2017','path',2),
+		   (2,'Fouriner Analysis','#frequance','Music','Racer Trey','Science Daily','02-14-2017','path',2),
+		   (3,'Cures For Epilepsy','#cure#venom','Innovations','Sara Tancredi','Med Talk','03-23-2017','path',1),
+		   (4,'Global Warming','#heat#world','Global Issues','Donna Pinciotti','World News','04-02-2017','path',3),
+		   (5,'Travelling Salesman','#graph#criminology','Math','Abby Mills','Math Today','03-20-2017','path',2),
+		   (6,'Limitless Pill','#memory#pill','Innovations','Morgan Gretchen','Med Talk','02-13-2017','path',1),
+		   (7,'Saving The World','#world#all','Global Issues','Ross Geller','World News','04-20-2017','path',3)
 
 INSERT INTO Speakers
 	VALUES ('SaraT','pass1919','tancredi@gmail.com','Tancredi','Sara',3),
@@ -55,7 +55,7 @@ INSERT INTO Reviews
 		   (3,'StevenH',3,'weak accept','More examples.'),
 		   (4,'JohnnyC',2,'strong accept','Interesting idea for undersatanding how to copy music.'),
 		   (5,'BenG',4,'accept','Cannot wait for the presentation.'),
-		   (6,'ChandlerB',1,'weak accept','Would need a liitle more documentation.')
+		   (6,'ChandlerB',1,'weak accept','Would need a liitle more documentation')
 
 INSERT INTO Bidding
 	VALUES ('ElaineB',1,1),
@@ -66,6 +66,10 @@ INSERT INTO Bidding
 		   ('ChandlerB',1,1),
 		   ('BenG',3,0),
 		   ('MortimerM',5,0),
-		   ('BenG',4,1),
+		   ('BenG',5,1),
 		   ('JohnnyC',2,1),
 		   ('AndiP',5,1)
+
+INSERT INTO Deadlines 
+	VALUES ('Abstract','02-20-2017'),
+		   ('Paper','06-20-2017')
