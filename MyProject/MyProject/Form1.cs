@@ -63,7 +63,7 @@ namespace MyProject
                 if (s.Username == username) //login successful
                 {
                     this.Hide();
-                    Form1 secondform = new Form1();
+                    FormSpeaker secondform = new FormSpeaker(s);
                     secondform.Show();
                 }
                 
