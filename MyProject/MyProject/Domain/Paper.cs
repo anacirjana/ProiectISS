@@ -54,6 +54,7 @@ namespace MyProject.Domain
 			topics = p.topics;
             authors = p.authors;
 			publisher = p.publisher;
+		this.pathPaper = pathPaper;
 			datePaper = p.datePaper;
 			idSection = p.idSection;
 		}
