@@ -40,7 +40,7 @@ namespace MyProject
             if (e.NewValue == CheckState.Checked && checkedListBox1.CheckedItems.Count >= 5)
             {
                 e.NewValue = CheckState.Unchecked;
-                MessageBox.Show("Va rugam selectati doar 5 lucrari !");
+                MessageBox.Show("You can't attend more than 5 presentations !");
             }
         }
 
