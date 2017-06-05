@@ -87,6 +87,7 @@ namespace MyProject
             this.chgDdlineLab.Size = new System.Drawing.Size(209, 32);
             this.chgDdlineLab.TabIndex = 10;
             this.chgDdlineLab.Text = "Change Deadline";
+            this.chgDdlineLab.Visible = false;
             this.chgDdlineLab.Click += new System.EventHandler(this.chgDdlineLab_Click);
             this.chgDdlineLab.Enter += new System.EventHandler(this.chgDdlineLab_Enter);
             this.chgDdlineLab.Leave += new System.EventHandler(this.chgDdlineLab_Leave);
@@ -166,7 +167,7 @@ namespace MyProject
             this.ddLineBtn.Text = "Change";
             this.ddLineBtn.UseVisualStyleBackColor = false;
             this.ddLineBtn.Visible = false;
-            this.ddLineBtn.Click += new System.EventHandler(this.ddLineBtn_Click_1);
+            this.ddLineBtn.Click += new System.EventHandler(this.ddLineBtn_Click);
             // 
             // FormCommitteeMember
             // 

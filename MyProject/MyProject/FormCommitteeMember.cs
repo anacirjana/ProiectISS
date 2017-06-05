@@ -29,7 +29,9 @@ namespace MyProject
             LabelUsername.Text = loggedUser.Username;
             if(c.Role == "chair")
             {
+                //only the chiar can change the deadlines and assign papers for review
                 label4.Visible = true;
+                chgDdlineLab.Visible = true;
             }
             prevForm = prev;
         }
@@ -163,11 +165,6 @@ namespace MyProject
         private void label4_MouseLeave(object sender, EventArgs e)
         {
             label4.ForeColor = Color.DeepSkyBlue;
-        }
-
-        private void ddLineBtn_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void FormCommitteeMember_FormClosing(object sender, FormClosingEventArgs e)

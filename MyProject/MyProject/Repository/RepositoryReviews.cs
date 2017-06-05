@@ -92,9 +92,9 @@ namespace MyProject.Repository
 		{
 			var _connectionString = DBUtils.getConnection();
 			var command = (SqlCommand)_connectionString.CreateCommand();
-			command.CommandText = @"INSERT INTO Reviews(idR, username, idP, qualifier, comment)
-					VALUES (@idR, @username, @idP, @qualifier, @comment)";
-			command.Parameters.AddWithValue("@idR", elem.IdR);
+			command.CommandText = @"INSERT INTO Reviews(username, idP, qualifier, comment)
+					VALUES ( @username, @idP, @qualifier, @comment)";
+			//command.Parameters.AddWithValue("@idR", elem.IdR);
 			command.Parameters.AddWithValue("@username", elem.UsernameCommiteeMember);
 			command.Parameters.AddWithValue("@idP", elem.IdP);
 			command.Parameters.AddWithValue("@qualifier", elem.Qualifier);

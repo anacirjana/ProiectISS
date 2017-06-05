@@ -29,7 +29,33 @@ namespace MyProject
             LabelUsername.Text = s.Username;
             prevForm = prev;
         }
+        public void saveToDB(string path)
+        {
+            int idP = _controllerPapers.GetIdPaper();
+            string title = tbTitle.Text;
+            string keywords = tbKeywords.Text;
+            string topics = tbKeywords.Text;
+            string authors = tbAuthors.Text;
+            string publisher = tbPublisher.Text;
+            string date = tbData.Text;
+            int idS=1;
+            if (title == "" || keywords == "" || authors == "" || topics == "" || publisher == "" || date == "" || ComboBoxSections.SelectedItem == null)
+                MessageBox.Show("Please complete all fields!");
+            //string path = "";
+            else
+            {
+                idS = _controllerPapers.GetSectionId(ComboBoxSections.SelectedItem.ToString());
 
+
+
+                if (!(path.Equals("")))
+                {
+                    _controllerPapers.SavePaper(new Paper(idP, title, keywords, topics, authors, publisher, date, path, idS));
+                    _controllerPapers.UpdatePaperSpeaker(loggedUser.Username, idP);
+                   // MessageBox.Show("Saved to DB!");
+                }
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if(DateTime.Today < _controllerPapers.GetPaperDeadline())
@@ -43,7 +69,7 @@ namespace MyProject
 
                 op1.Filter = "allfiles|*.doc*";
 
-                tbPaper.Text = op1.FileName;
+               // tbPaper.Text = op1.FileName;
 
                 int count = 0;
 
@@ -55,14 +81,18 @@ namespace MyProject
 
                     FName = s.Split('\\');
                     string ExecutableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                    object path = Path.Combine(ExecutableLocation, "PaperContents/");
-                    File.Copy(s, path + FName[FName.Length - 1]);
-
+                    string path = Path.Combine(ExecutableLocation, "PaperContents\\");
+                    path = path + FName[FName.Length - 1];
+                   // File.
+                    File.Copy(s, path);
+                    saveToDB("PaperContents/"+ FName[FName.Length - 1]);
                     count++;
 
                 }
-
-                MessageBox.Show(Convert.ToString(count) + "Uploaded with success!");
+                if (count != 0)
+                    MessageBox.Show("Uploaded with success!");
+                else
+                    MessageBox.Show("Could not upload");
             }
             else
             {
@@ -82,7 +112,7 @@ namespace MyProject
 
                 op1.Filter = "allfiles|*.docx";
 
-                tbPaper.Text = op1.FileName;
+               // tbPaper.Text = op1.FileName;
 
                 int count = 0;
 
@@ -94,14 +124,18 @@ namespace MyProject
 
                     FName = s.Split('\\');
                     string ExecutableLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                    object path = Path.Combine(ExecutableLocation, "PaperContents/");
-                    File.Copy(s, path + FName[FName.Length - 1]);
+                    string path = Path.Combine(ExecutableLocation, "PaperContents\\");
+                    path = path + FName[FName.Length - 1];
+                    File.Copy(s, "PaperContents/" + FName[FName.Length - 1]);
 
+                    saveToDB(path);
                     count++;
 
                 }
-
-                MessageBox.Show(Convert.ToString(count) + "Uploaded with success!");
+                if (count != 0)
+                    MessageBox.Show("Uploaded with success!");
+                else
+                    MessageBox.Show("Could not upload");
             }
             else
             {
@@ -134,35 +168,7 @@ namespace MyProject
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int idP = _controllerPapers.GetIdPaper();
-            string title = tbTitle.Text;
-            string keywords = tbKeywords.Text;
-            string topics = tbKeywords.Text;
-            string authors = tbAbstract.Text;
-            string publisher = tbPublisher.Text;
-            string date = tbData.Text;
-            int idS = _controllerPapers.GetSectionId(ComboBoxSections.SelectedItem.ToString());
-
-            string path = "";
-            if(!(tbAbstract.Text.Equals("")))
-            {
-                path = tbAbstract.Text;
-            }
-            else if(!(tbPaper.Text.Equals("")))
-            {
-                path = tbPaper.Text;
-            }
-            else
-            {
-                MessageBox.Show("Add path of file!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            if(!(path.Equals("")))
-            {
-                _controllerPapers.SavePaper(new Paper(idP,title,keywords,topics,authors,publisher,date,path,idS));
-                _controllerPapers.UpdatePaperSpeaker(loggedUser.Username,idP);
-                MessageBox.Show("Saved to DB!");
-            }
+           
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

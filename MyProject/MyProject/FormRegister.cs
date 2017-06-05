@@ -58,7 +58,7 @@ namespace MyProject
 				ctrSpeakers.Register(new Speaker(textBox3.Text, TextBoxPassword.Text, textBox1.Text,
                                                         textBox2.Text, textBox4.Text));
             }
-            MessageBox.Show("Register was succesful!\nRedirecting to login...");
+            MessageBox.Show("Register was successful!\nRedirecting to login...");
             Form1 login = new Form1();
             this.Hide();
             login.Show();

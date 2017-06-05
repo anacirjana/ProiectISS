@@ -59,11 +59,8 @@ namespace MyProject
 			Microsoft.Office.Interop.Word.Document docs = word.Documents.Open(ref path, ref miss, ref readOnly, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss, ref miss);
 			string totaltext = docs.Content.Text;
            
-           // PaperContent
-            //docs.Content.
 			docs.Close();
 			word.Quit();
-            // PaperContent.Rtf = totaltext;
             PaperContent.Font = new Font("Trebuchet MS",13);
            PaperContent.Text = totaltext;
 
