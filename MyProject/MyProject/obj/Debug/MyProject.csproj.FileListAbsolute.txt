@@ -90,3 +90,6 @@ C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProje
 C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.Properties.Resources.resources
 C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.Reviews.resources
 C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.csproj.GenerateResource.Cache
+C:\Users\Cata\Documents\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormAssignment.resources
+C:\Users\Cata\Documents\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.FormSpeaker.resources
+C:\Users\Cata\Documents\ProiectISS\MyProject\MyProject\obj\Debug\MyProject.Reviews.resources

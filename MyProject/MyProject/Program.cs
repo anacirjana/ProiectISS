@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyProject.Tests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,13 @@ namespace MyProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            TestDomain td = new TestDomain();
+            TestRepository tr = new TestRepository();
+            TestController tc = new TestController();
+            td.testare01();
+            tr.test();
+            tc.testCtr();
+            Application.Run(new Form1()); 
         }
     }
 }

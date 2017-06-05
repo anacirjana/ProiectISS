@@ -87,5 +87,10 @@ namespace MyProject
             this.Hide();
             prevForm.Show();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
