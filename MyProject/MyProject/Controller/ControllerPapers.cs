@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -83,5 +83,34 @@ namespace MyProject.Controller
             return repop.GetidLucrare(id);
         }
 
+        public DateTime GetAbstractDeadline()
+        {
+            return repop.GetAbstractDeadline();
+        }
+
+        public DateTime GetPaperDeadline()
+        {
+            return repop.GetPaperDeadline();
+        }
+
+        public int GetSectionId(string nameS)
+        {
+            return repop.GetIdSection(nameS);
+        }
+
+        public void SavePaper(Paper p)
+        {
+            repop.Save(p);
+        }
+
+        public int GetIdPaper()
+        {
+            return repop.GetIdPaper();
+        }
+
+        public void UpdatePaperSpeaker(string user,int idP)
+        {
+            repop.UpdatePaperSpeaker(user,idP);
+        }
     }
 }
