@@ -21,17 +21,40 @@ namespace MyProject.Repository
             var _connectionString = DBUtils.getConnection();
             var command = (SqlCommand)_connectionString.CreateCommand();
 
-            command.CommandText = @"INSERT INTO Bidding(usernameCommitteeMember, idP, accepted)
-					VALUES (@username, @idP, @accepted)";
-         
-            command.Parameters.AddWithValue("@username", elem.UsernameCommitteeMember);
-            command.Parameters.AddWithValue("@idP", elem.IdPaper);
-            if (elem.Accepted==true)    
-                command.Parameters.AddWithValue("@accepted", 1);
-            else
-                command.Parameters.AddWithValue("@accepted", 0);
+			command.CommandText = @"SELECT COUNT(*) FROM Bidding WHERE usernameCommitteeMember = @username AND idP = @idP";
+			command.Parameters.AddWithValue("@username", elem.UsernameCommitteeMember);
+			command.Parameters.AddWithValue("@idP", elem.IdPaper);
 
-            command.ExecuteNonQuery();
+			int n = Int32.Parse(command.ExecuteScalar().ToString());
+			if (n == 0)
+			{
+				command = (SqlCommand)_connectionString.CreateCommand();
+				command.CommandText = @"INSERT INTO Bidding(usernameCommitteeMember, idP, accepted)
+						VALUES (@username, @idP, @accepted)";
+
+				command.Parameters.AddWithValue("@username", elem.UsernameCommitteeMember);
+				command.Parameters.AddWithValue("@idP", elem.IdPaper);
+				if (elem.Accepted == true)
+					command.Parameters.AddWithValue("@accepted", 1);
+				else
+					command.Parameters.AddWithValue("@accepted", 0);
+
+				command.ExecuteNonQuery();
+			}
+			else
+			{
+				command = (SqlCommand)_connectionString.CreateCommand();
+				command.CommandText = @"UPDATE Bidding SET accepted = @accepted WHERE usernameCommitteeMember = @username AND idP = @idP";
+
+				command.Parameters.AddWithValue("@username", elem.UsernameCommitteeMember);
+				command.Parameters.AddWithValue("@idP", elem.IdPaper);
+				if (elem.Accepted == true)
+					command.Parameters.AddWithValue("@accepted", 1);
+				else
+					command.Parameters.AddWithValue("@accepted", 0);
+
+				command.ExecuteNonQuery();
+			}
         }
 
         public void Delete(string idBidding)

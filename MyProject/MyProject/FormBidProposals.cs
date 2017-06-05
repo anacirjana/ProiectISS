@@ -87,6 +87,7 @@ namespace MyProject
                     ctrlb.addBidding(b);
                 }
             }
+			MessageBox.Show("Bidding Successful!");
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
