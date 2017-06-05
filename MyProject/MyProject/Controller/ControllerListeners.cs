@@ -53,6 +53,11 @@ namespace MyProject.Controller
             return repo.GetAll();
         }
 
+		public void addListener(string username, int idP)
+		{
+			repo.addListener(username, idP);
+		}
+
 
     }
 }

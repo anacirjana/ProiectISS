@@ -156,6 +156,27 @@ namespace MyProject.Repository
             return listeners;
         }
 
+		public void addListener(string username, int idP)
+		{
+			var _connectionString = DBUtils.getConnection();
+			var command = (SqlCommand)_connectionString.CreateCommand();
+
+			command.CommandText = @"SELECT COUNT(*) FROM Attendance WHERE usernameListener = @username AND idP = @idP";
+			command.Parameters.AddWithValue("@username", username);
+			command.Parameters.AddWithValue("@idP", idP);
+
+			int n = Int32.Parse(command.ExecuteScalar().ToString());
+			if (n == 0)
+			{
+				command = (SqlCommand)_connectionString.CreateCommand();
+				command.CommandText = @"INSERT INTO Attendance(usernameListener, idP)
+						VALUES (@username, @idP)";
+
+				command.Parameters.AddWithValue("@username", username);
+				command.Parameters.AddWithValue("@idP", idP);
+				command.ExecuteNonQuery();
+			}
+		}
 
     }
 }

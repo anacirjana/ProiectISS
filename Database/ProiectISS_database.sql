@@ -71,3 +71,9 @@ create table Deadlines(
 	deadline date
 	primary key(name,deadline)
 );
+
+create table Attendance(
+	usernameListener nvarchar(10) references Listeners(username),
+	idP int references Papers(idP),
+	primary key(usernameListener, idP)
+);

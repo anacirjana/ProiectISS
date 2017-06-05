@@ -16,12 +16,14 @@ namespace MyProject
     {
         Listener loggedUser;
         ControllerPapers ctrlp;
+		ControllerListeners ctrll;
         Form prevForm;
         public FormListener(Listener l, Form prev)
         {
             loggedUser = new Listener();
             ctrlp = new ControllerPapers();
-            loggedUser = l;
+			ctrll = new ControllerListeners();
+			loggedUser = l;
             InitializeComponent();
             List<Paper> paperList = (List<Paper>)ctrlp.GetAllAcceptedPapers();
             foreach (Paper p in paperList)
@@ -54,8 +56,18 @@ namespace MyProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //MessageBoxIcon msgb = new MessageBoxIcon();
-            MessageBox.Show("Submit was succesful!");
+			for (int i = 0; i < checkedListBox1.Items.Count; i++)
+			{
+				string s = (string)checkedListBox1.Items[i];
+				string[] res = s.Split('.');
+				int id;
+				int.TryParse(res[0], out id);
+				if (checkedListBox1.GetItemCheckState(i) == CheckState.Checked)
+				{
+					ctrll.addListener(loggedUser.Username, id);
+				}
+			}
+			MessageBox.Show("Submit was succesful!");
 
         }
 
