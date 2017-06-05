@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -31,12 +31,17 @@ namespace MyProject.Repository
         {
             var _connectionString = DBUtils.getConnection();
             var command = (SqlCommand)_connectionString.CreateCommand();
-            command.CommandText = @"INSERT INTO Papers(idP, title, keywords, topics, authors, publisher, datePaper, pathPaper, idSection)                     VALUES (@idP, @title, @keywords, @topics, @authors, @publisher, @datePaper, @pathPaper, @idSection)";
+            command.CommandText = @"INSERT INTO Papers(idP, title, keywords, topics, authors, publisher, datePaper, pathPaper, idSection)
+                    VALUES (@idP, @title, @keywords, @topics, @authors, @publisher, @datePaper, @pathPaper, @idSection)";
             command.Parameters.AddWithValue("@idP", elem.IdP);
             command.Parameters.AddWithValue("@title", elem.Title);
-            command.Parameters.AddWithValue("@keywors", elem.Keywords);
+            command.Parameters.AddWithValue("@keywords", elem.Keywords);
             command.Parameters.AddWithValue("@topics", elem.Topics);
-            command.Parameters.AddWithValue("@authors", elem.Authors);             command.Parameters.AddWithValue("@publisher", elem.Publisher);             command.Parameters.AddWithValue("@datePaper", elem.DatePaper);             command.Parameters.AddWithValue("@pathPaper", elem.PathPaper);             command.Parameters.AddWithValue("@idSection", elem.IdSection);
+            command.Parameters.AddWithValue("@authors", elem.Authors);
+            command.Parameters.AddWithValue("@publisher", elem.Publisher);
+            command.Parameters.AddWithValue("@datePaper", elem.DatePaper);
+            command.Parameters.AddWithValue("@pathPaper", elem.PathPaper);
+            command.Parameters.AddWithValue("@idSection", elem.IdSection);
             command.ExecuteNonQuery();
         }
         public void Delete(int id)
@@ -236,5 +241,85 @@ namespace MyProject.Repository
 
 		//======================================================================
 
-	}
+        public DateTime GetAbstractDeadline()
+        {
+            var _connectionString = DBUtils.getConnection();
+            var command = (SqlCommand)_connectionString.CreateCommand();
+            command.CommandText = "SELECT deadline FROM Deadlines WHERE name = @name";
+            command.Parameters.AddWithValue("@name", "Abstract");
+            var reader = command.ExecuteReader();
+
+            DateTime date = default(DateTime);
+            while (reader.Read())
+            {
+                date = reader.GetDateTime(0);
+            }
+
+            reader.Close();
+            return date;
+        }
+
+        public DateTime GetPaperDeadline()
+        {
+            var _connectionString = DBUtils.getConnection();
+            var command = (SqlCommand)_connectionString.CreateCommand();
+            command.CommandText = "SELECT deadline FROM Deadlines WHERE name = @name";
+            command.Parameters.AddWithValue("@name", "Paper");
+            var reader = command.ExecuteReader();
+
+            DateTime date = default(DateTime);
+            while (reader.Read())
+            {
+                date = reader.GetDateTime(0);
+            }
+
+            reader.Close();
+            return date;
+        }
+
+        public int GetIdSection(string nameS)
+        {
+            var con = DBUtils.getConnection();
+            var command = (SqlCommand)con.CreateCommand();
+            command.CommandText = "SELECT idS FROM Sections WHERE numeS = @numeS";
+            command.Parameters.AddWithValue("@numeS", nameS);
+            var reader = command.ExecuteReader();
+
+            var id = 0;
+            while (reader.Read())
+            {
+                id = reader.GetInt32(0);
+            }
+
+            reader.Close();
+            return id;
+        }
+
+        public int GetIdPaper()
+        {
+            var con = DBUtils.getConnection();
+            var command = (SqlCommand)con.CreateCommand();
+            command.CommandText = "SELECT MAX(idP) FROM Papers";
+            var reader = command.ExecuteReader();
+
+            var id = 0;
+            while (reader.Read())
+            {
+                id = reader.GetInt32(0);
+            }
+
+            reader.Close();
+            return id + 1;
+        }
+
+        public void UpdatePaperSpeaker(string user,int idP)
+        {
+            var _connectionString = DBUtils.getConnection();
+            var command = (SqlCommand)_connectionString.CreateCommand();
+            command.CommandText = @"UPDATE Speakers SET idLucrare = @idP WHERE username = @username";
+            command.Parameters.AddWithValue("@idP", idP);
+            command.Parameters.AddWithValue("@username", user);
+            command.ExecuteNonQuery();
+        }
+    }
 }
