@@ -17,11 +17,13 @@ namespace MyProject
         ControllerPapers ctrp;
         ControllerBiddings ctrb;
         ControllerReviews ctrr;
-        
+        CommitteeMember loggedChair;
+        Form prevForm;
       
 
-        public FormAssignment()
+        public FormAssignment(CommitteeMember chair, Form prev)
         {
+            loggedChair = chair;
             InitializeComponent();
             ctrp = new ControllerPapers();
             List<Paper> paperList = (List<Paper>)ctrp.GetAllPapers();
@@ -30,6 +32,7 @@ namespace MyProject
                 listBox1.Items.Add(p.IdP.ToString() + '.' + p.Title);
 
             }
+            prevForm = prev;
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -81,6 +84,17 @@ namespace MyProject
             {
                 checkedListBox1.SetItemCheckState(i, CheckState.Unchecked);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            prevForm.Show();
+        }
+
+        private void FormAssignment_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

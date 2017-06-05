@@ -17,8 +17,9 @@ namespace MyProject
         private string _username;
         private ControllerReviews _controllerReview;
         private ControllerPapers _controllerPaper;
+        Form prevForm;
 
-        public Reviews(string username)
+        public Reviews(string username, Form prev)
         {
             InitializeComponent();
             
@@ -28,6 +29,7 @@ namespace MyProject
 
             AddQualifiers();
             GetPapers();
+            prevForm = prev;
         }
 
         private void AddQualifiers()
@@ -72,6 +74,18 @@ namespace MyProject
             int idR = _controllerReview.GetReviewId(_username, paper.IdP);
             Review reviewOld = _controllerReview.GetOne(idR);
             _controllerReview.UpdateReview(reviewOld, review);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            prevForm.Show();
+        }
+
+        private void Reviews_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            prevForm.Show();
         }
     }
 }

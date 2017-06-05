@@ -17,7 +17,8 @@ namespace MyProject
     {
         ControllerCommitteeMembers controllerCM;
         CommitteeMember loggedUser;
-        public FormCommitteeMember(CommitteeMember c)
+        Form prevForm;
+        public FormCommitteeMember(CommitteeMember c, Form prev)
         {
             controllerCM = new ControllerCommitteeMembers();
             loggedUser = new CommitteeMember();
@@ -26,11 +27,11 @@ namespace MyProject
             InitializeComponent();
 
             LabelUsername.Text = loggedUser.Username;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
+            if(c.Role == "chair")
+            {
+                label4.Visible = true;
+            }
+            prevForm = prev;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -52,7 +53,7 @@ namespace MyProject
         private void label6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormBidProposals formBid = new FormBidProposals(loggedUser);
+            FormBidProposals formBid = new FormBidProposals(loggedUser,this);
             
             formBid.Show();
         }
@@ -81,14 +82,12 @@ namespace MyProject
             ddLineBtn.Visible = false;
         }
 
-        private void chgDdlineLab_MouseHover(object sender, EventArgs e)
+        private void chgDdlineLab_Enter(object sender, EventArgs e)
         {
-            chgDdlineLab.ForeColor = Color.Red;
         }
 
-        private void chgDdlineLab_MouseLeave(object sender, EventArgs e)
+        private void chgDdlineLab_MouseHover(object sender, EventArgs e)
         {
-            chgDdlineLab.ForeColor = Color.DeepSkyBlue;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -97,13 +96,73 @@ namespace MyProject
             {
                 this.Hide();
                 string username = loggedUser.Username;
-                Reviews formReview = new Reviews(username);
+                Reviews formReview = new Reviews(username,this);
                 formReview.Show();
             }
             else
             {
                 MessageBox.Show("The bidding phase is not over yet!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormAssignment formAsg = new FormAssignment(loggedUser,this);
+
+            formAsg.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            prevForm.Show();
+        }
+
+        
+
+        private void chgDdlineLab_Leave(object sender, EventArgs e)
+        {
+            //chgDdlineLab.ForeColor = Color.SkyBlue;
+        }
+
+        private void chgDdlineLab_MouseEnter(object sender, EventArgs e)
+        {
+            chgDdlineLab.ForeColor = Color.Red;
+        }
+        private void chgDdlineLab_MouseLeave(object sender, EventArgs e)
+        {
+            chgDdlineLab.ForeColor = Color.DeepSkyBlue;
+        }
+
+        private void label3_MouseEnter(object sender, EventArgs e)
+        {
+            label3.ForeColor = Color.Red;
+        }
+
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+            label3.ForeColor = Color.DeepSkyBlue;
+        }
+
+        private void label4_MouseEnter(object sender, EventArgs e)
+        {
+            label4.ForeColor = Color.Red;
+        }
+
+        private void label4_MouseLeave(object sender, EventArgs e)
+        {
+            label4.ForeColor = Color.DeepSkyBlue;
+        }
+
+        private void ddLineBtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormCommitteeMember_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

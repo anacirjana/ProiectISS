@@ -38,7 +38,7 @@ namespace MyProject
                 if (cm.Username == username) //login successful
                 {
                     this.Hide();
-                    FormCommitteeMember secondform = new FormCommitteeMember(cm);
+                    FormCommitteeMember secondform = new FormCommitteeMember(cm,this);
                     secondform.Show();
                 }
             }
@@ -50,7 +50,7 @@ namespace MyProject
                 if (l.Username == username) //login successful
                 {
                     this.Hide();
-                    FormListener secondform = new FormListener(l);
+                    FormListener secondform = new FormListener(l,this);
                     secondform.Show();
                 }
                 
@@ -63,7 +63,7 @@ namespace MyProject
                 if (s.Username == username) //login successful
                 {
                     this.Hide();
-                    FormSpeaker secondform = new FormSpeaker(s);
+                    FormSpeaker secondform = new FormSpeaker(s,this);
                     secondform.Show();
                 }
                 

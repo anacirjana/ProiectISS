@@ -16,7 +16,8 @@ namespace MyProject
     {
         Listener loggedUser;
         ControllerPapers ctrlp;
-        public FormListener(Listener l)
+        Form prevForm;
+        public FormListener(Listener l, Form prev)
         {
             loggedUser = new Listener();
             ctrlp = new ControllerPapers();
@@ -28,6 +29,8 @@ namespace MyProject
                 checkedListBox1.Items.Add(p.IdP.ToString() + '.' + p.Title);
 
             }
+            label2.Text = l.Username;
+            prevForm = prev;
         }
 
         private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -42,6 +45,29 @@ namespace MyProject
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormListener_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //MessageBoxIcon msgb = new MessageBoxIcon();
+            MessageBox.Show("Submit was succesful!");
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            prevForm.Show();
+        }
+
+        private void FormListener_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

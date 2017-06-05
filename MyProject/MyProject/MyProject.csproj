@@ -73,6 +73,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAssignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAssignment.Designer.cs">
+      <DependentUpon>FormAssignment.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBidProposals.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAssignment.resx">
+      <DependentUpon>FormAssignment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBidProposals.resx">
       <DependentUpon>FormBidProposals.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +157,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reviews.resx">
       <DependentUpon>Reviews.cs</DependentUpon>
@@ -167,6 +177,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assign.jpg" />
+    <Content Include="back.png" />
+    <None Include="img.jpg" />
+    <None Include="becs.jpg" />
+    <None Include="cm.gif" />
+    <None Include="inapoi.png" />
     <Content Include="TextFile.txt" />
   </ItemGroup>
   <ItemGroup>

@@ -73,3 +73,20 @@ D:\Facultate\sem4\iss\MyProject\MyProject\obj\Debug\MyProject.FormSpeaker.resour
 D:\Facultate\sem4\iss\MyProject\MyProject\obj\Debug\MyProject.Properties.Resources.resources
 D:\Facultate\sem4\iss\MyProject\MyProject\obj\Debug\MyProject.Reviews.resources
 D:\Facultate\sem4\iss\MyProject\MyProject\obj\Debug\MyProject.csproj.GenerateResource.Cache
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\bin\Debug\MyProject.exe.config
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.csproj.ResolveComReference.cache
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.exe
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.pdb
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\bin\Debug\MyProject.exe
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\bin\Debug\MyProject.pdb
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.csprojResolveAssemblyReference.cache
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.Form1.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.FormAssignment.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.FormBidProposals.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.FormCommitteeMember.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.FormListener.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.FormRegister.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.FormSpeaker.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.Properties.Resources.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.Reviews.resources
+C:\Users\Ana Cirjan\Documents\info\An 2 Sem 2 EU\ISS\MyProlast\MyProject\MyProject\obj\Debug\MyProject.csproj.GenerateResource.Cache

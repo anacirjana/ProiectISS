@@ -29,6 +29,8 @@ namespace MyProject
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,13 +45,12 @@ namespace MyProject
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::MyProject.Properties.Resources.becs;
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.textBox4);
@@ -66,17 +67,38 @@ namespace MyProject
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(698, 408);
+            this.panel1.Size = new System.Drawing.Size(931, 502);
             this.panel1.TabIndex = 0;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(401, 338);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(207, 22);
+            this.textBox5.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label8.Location = new System.Drawing.Point(216, 338);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(86, 32);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "IBAN: ";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(301, 237);
+            this.textBox4.Location = new System.Drawing.Point(401, 292);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(156, 20);
+            this.textBox4.Size = new System.Drawing.Size(207, 22);
             this.textBox4.TabIndex = 17;
             // 
             // label7
@@ -84,9 +106,10 @@ namespace MyProject
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(162, 237);
+            this.label7.Location = new System.Drawing.Point(216, 292);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 26);
+            this.label7.Size = new System.Drawing.Size(91, 32);
             this.label7.TabIndex = 20;
             this.label7.Text = "Email:";
             // 
@@ -95,10 +118,10 @@ namespace MyProject
             this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.button1.Font = new System.Drawing.Font("Trebuchet MS", 15F);
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(523, 340);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(697, 418);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 38);
+            this.button1.Size = new System.Drawing.Size(143, 47);
             this.button1.TabIndex = 20;
             this.button1.Text = "Register";
             this.button1.UseVisualStyleBackColor = false;
@@ -116,11 +139,11 @@ namespace MyProject
             this.ComboBoxParticipants.Items.AddRange(new object[] {
             "Listener",
             "Speaker"});
-            this.ComboBoxParticipants.Location = new System.Drawing.Point(301, 323);
-            this.ComboBoxParticipants.Margin = new System.Windows.Forms.Padding(2);
+            this.ComboBoxParticipants.Location = new System.Drawing.Point(401, 398);
+            this.ComboBoxParticipants.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ComboBoxParticipants.Name = "ComboBoxParticipants";
             this.ComboBoxParticipants.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ComboBoxParticipants.Size = new System.Drawing.Size(157, 26);
+            this.ComboBoxParticipants.Size = new System.Drawing.Size(208, 28);
             this.ComboBoxParticipants.TabIndex = 19;
             // 
             // label6
@@ -129,10 +152,9 @@ namespace MyProject
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label6.Location = new System.Drawing.Point(160, 320);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(213, 394);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 26);
+            this.label6.Size = new System.Drawing.Size(168, 32);
             this.label6.TabIndex = 17;
             this.label6.Text = "I want to be:";
             // 
@@ -141,11 +163,11 @@ namespace MyProject
             this.TextBoxPassword.BackColor = System.Drawing.SystemColors.HighlightText;
             this.TextBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TextBoxPassword.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.TextBoxPassword.Location = new System.Drawing.Point(302, 200);
-            this.TextBoxPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.TextBoxPassword.Location = new System.Drawing.Point(403, 246);
+            this.TextBoxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TextBoxPassword.Name = "TextBoxPassword";
-            this.TextBoxPassword.PasswordChar = '♥';
-            this.TextBoxPassword.Size = new System.Drawing.Size(156, 20);
+            this.TextBoxPassword.PasswordChar = '•';
+            this.TextBoxPassword.Size = new System.Drawing.Size(207, 22);
             this.TextBoxPassword.TabIndex = 16;
             this.TextBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -155,27 +177,26 @@ namespace MyProject
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(162, 200);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(216, 246);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 26);
+            this.label4.Size = new System.Drawing.Size(135, 32);
             this.label4.TabIndex = 15;
             this.label4.Text = "Password:";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(301, 160);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Location = new System.Drawing.Point(401, 197);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 20);
+            this.textBox3.Size = new System.Drawing.Size(208, 22);
             this.textBox3.TabIndex = 14;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(301, 122);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Location = new System.Drawing.Point(401, 150);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(157, 20);
+            this.textBox2.Size = new System.Drawing.Size(208, 22);
             this.textBox2.TabIndex = 13;
             // 
             // label3
@@ -184,10 +205,9 @@ namespace MyProject
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(162, 122);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(216, 150);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 26);
+            this.label3.Size = new System.Drawing.Size(126, 32);
             this.label3.TabIndex = 12;
             this.label3.Text = "Surname:";
             // 
@@ -197,19 +217,18 @@ namespace MyProject
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(160, 160);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(213, 197);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 26);
+            this.label2.Size = new System.Drawing.Size(141, 32);
             this.label2.TabIndex = 11;
             this.label2.Text = "Username:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(301, 84);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Location = new System.Drawing.Point(401, 103);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 20);
+            this.textBox1.Size = new System.Drawing.Size(208, 22);
             this.textBox1.TabIndex = 10;
             // 
             // label1
@@ -218,10 +237,9 @@ namespace MyProject
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(18, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(24, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(596, 49);
+            this.label1.Size = new System.Drawing.Size(745, 63);
             this.label1.TabIndex = 9;
             this.label1.Text = "Welcome to CMS register page";
             // 
@@ -231,41 +249,23 @@ namespace MyProject
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label5.Location = new System.Drawing.Point(160, 84);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(213, 103);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 26);
+            this.label5.Size = new System.Drawing.Size(91, 32);
             this.label5.TabIndex = 8;
             this.label5.Text = "Name:";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label8.Location = new System.Drawing.Point(162, 275);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 26);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "IBAN: ";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(301, 275);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(156, 20);
-            this.textBox5.TabIndex = 18;
-            // 
             // FormRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
-            this.ClientSize = new System.Drawing.Size(699, 409);
+            this.ClientSize = new System.Drawing.Size(932, 503);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormRegister";
-            this.Text = "FormRegister";
+            this.Text = "Register";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormRegister_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

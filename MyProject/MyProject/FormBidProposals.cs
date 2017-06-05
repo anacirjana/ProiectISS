@@ -20,7 +20,8 @@ namespace MyProject
         CommitteeMember loggedUser;
         ControllerPapers ctrlp;
         ControllerBiddings ctrlb;
-        public FormBidProposals(CommitteeMember cm)
+        Form prevForm;
+        public FormBidProposals(CommitteeMember cm, Form prev)
         {
             loggedUser = new CommitteeMember();
             ctrlp = new ControllerPapers();
@@ -33,6 +34,7 @@ namespace MyProject
                 CheckedListBoxProposals.Items.Add(p.IdP.ToString()+'.'+p.Title);
                
             }
+            prevForm = prev;
         }
 
         private void FormBidProposals_Load(object sender, EventArgs e)
@@ -90,6 +92,18 @@ namespace MyProject
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            prevForm.Show();
+        }
+
+        private void FormBidProposals_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            prevForm.Show();
         }
     }
 }

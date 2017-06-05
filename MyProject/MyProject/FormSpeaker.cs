@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using System.ComponentModel;
 using System.IO;
 using System.Reflection;
 using MyProject.Domain;
@@ -17,10 +16,13 @@ namespace MyProject
     public partial class FormSpeaker : Form
     {
         Speaker loggedUser;
-        public FormSpeaker(Speaker s)
+        Form prevForm;
+        public FormSpeaker(Speaker s, Form prev)
         {
             loggedUser = s;
             InitializeComponent();
+            LabelUsername.Text = s.Username;
+            prevForm = prev;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -84,6 +86,24 @@ namespace MyProject
                 count++;
 
             }
+        }
+
+        private void FormSpeaker_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            prevForm.Show();
+        }
+
+        private void FormSpeaker_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+            
+            //this.Dispose();
         }
     }
 }

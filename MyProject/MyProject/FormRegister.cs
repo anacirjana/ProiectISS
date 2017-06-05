@@ -58,6 +58,15 @@ namespace MyProject
 				ctrSpeakers.Register(new Speaker(textBox3.Text, TextBoxPassword.Text, textBox1.Text,
                                                         textBox2.Text, textBox4.Text));
             }
+            MessageBox.Show("Register was succesful!\nRedirecting to login...");
+            Form1 login = new Form1();
+            this.Hide();
+            login.Show();
+        }
+
+        private void FormRegister_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
