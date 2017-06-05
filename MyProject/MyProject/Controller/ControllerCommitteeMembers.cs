@@ -39,5 +39,10 @@ namespace MyProject.Controller
         {
             return repo.GetDeadline();
         }
+        
+        public DateTime GetAbstractDeadline()
+        {
+            return repo.GetAbstractDeadline();
+        }
     }
 }

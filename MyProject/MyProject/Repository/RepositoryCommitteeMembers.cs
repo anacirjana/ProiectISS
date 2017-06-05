@@ -170,5 +170,23 @@ namespace MyProject.Repository
             reader.Close();
             return date;
         }
+        
+        public DateTime GetAbstractDeadline()
+        {
+            var _connectionString = DBUtils.getConnection();
+            var command = (SqlCommand)_connectionString.CreateCommand();
+            command.CommandText = "SELECT deadline FROM Deadlines WHERE name = @name";
+            command.Parameters.AddWithValue("@name", "Abstract");
+            var reader = command.ExecuteReader();
+
+            DateTime date = default(DateTime);
+            while (reader.Read())
+            {
+                date = reader.GetDateTime(0);
+            }
+
+            reader.Close();
+            return date;
+        }
     }
 }
