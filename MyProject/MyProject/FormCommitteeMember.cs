@@ -52,10 +52,20 @@ namespace MyProject
 
         private void label6_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormBidProposals formBid = new FormBidProposals(loggedUser,this);
-            
-            formBid.Show();
+            if(DateTime.Today < controllerCM.GetTime())
+            {
+                this.Hide();
+                FormBidProposals formBid = new FormBidProposals(loggedUser, this);
+                formBid.Show();
+            }
+            else if(DateTime.Today < controllerCM.GetAbstractDeadline())
+            {
+                MessageBox.Show("The abstract uploading phase is not over yet!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("The bidding phase is over!", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void chgDdlineLab_Click(object sender, EventArgs e)
